@@ -1,0 +1,1994 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@layer reset {
+  html, body {
+    display: block;
+  }
+  html {
+    font-size: 14px;
+  }
+  * {
+    font-family: "Inter", sans-serif;
+    -webkit-tap-highlight-color: transparent;
+  }
+  [data-show=false] {
+    display: none !important;
+    visibility: hidden;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  feature-flag {
+    visibility: hidden;
+    display: none;
+  }
+}
+html.force-light {
+  --button-default-color: black;
+  --button-default-background: white;
+  --button-inverted-color: white;
+  --button-inverted-background: black;
+  --notification-color: white;
+  --base-subtitle-color: white;
+  --base-subtitle-background-color: black;
+  --base-main-background: #d9d9d9;
+  --chatmessage-color: black;
+  --chatmessage-background: white;
+  --chatmessage-me-background: #a8efff;
+  --chatmessage-unvoted-icon-stroke: black;
+  --agenda-base-background: white;
+  --agenda-base-color: black;
+  --agenda-base-bookmark-stroke: black;
+  --agenda-expired-background: #eaeaea;
+  --agenda-expired-border-color: #ababab;
+  --agenda-expired-color: #4d4d4d;
+  --agenda-feedback-background: #eaeaea;
+  --agendaitem-speaker-background: #f7f7f7;
+  --speaker-profile-speaker-background: #fff;
+  --speaker-profile-color: black;
+  --speaker-profile-back-circle: #bcbcbc;
+  --chataction-message-color: black;
+  --chataction-message-background: white;
+  --chataction-add-stroke: white;
+  --chataction-send-icon: white;
+  --chataction-rooms-background: white;
+  --chatmessage-room-button-background: white;
+  --chatmessage-room-button-color: black;
+  --map-legend-color: black;
+  --about-color: black;
+  --agenda-feedback-star-inactive: black;
+  --agenda-feedback-modal-background: white;
+  --agenda-feedback-color: black;
+  --agenda-footer-color: #717171;
+  --agenda-expired-speaker-background: #f7f7f7;
+}
+html.force-dark {
+  --button-default-color: white;
+  --button-default-background: black;
+  --button-inverted-color: black;
+  --button-inverted-background: white;
+  --notification-color: black;
+  --base-subtitle-color: white;
+  --base-subtitle-background-color: black;
+  --base-main-background: #2e2e2e;
+  --chatmessage-color: white;
+  --chatmessage-background: black;
+  --chatmessage-me-background: #00667d;
+  --chatmessage-unvoted-icon-stroke: white;
+  --agenda-base-background: black;
+  --agenda-base-color: white;
+  --agenda-base-bookmark-stroke: white;
+  --agenda-expired-background: #434343;
+  --agenda-expired-border-color: #737373;
+  --agenda-expired-color: #c2c2c2;
+  --agendaitem-speaker-background: #1a1a1a;
+  --speaker-profile-speaker-background: black;
+  --speaker-profile-color: white;
+  --chataction-message-color: white;
+  --chataction-message-background: black;
+  --chataction-add-stroke: black;
+  --chataction-send-icon: black;
+  --about-color: white;
+  --speaker-profile-back-circle: #222;
+  --chataction-rooms-background: black;
+  --chatmessage-room-button-background: black;
+  --chatmessage-room-button-color: white;
+  --map-legend-color: white;
+  --agenda-feedback-star-inactive: white;
+  --agenda-feedback-modal-background: black;
+  --agenda-feedback-color: white;
+  --agenda-feedback-background: #151515;
+  --agenda-footer-color: #b3b3b3;
+  --agenda-expired-speaker-background: #292929;
+}
+:root {
+  --splash-font-color: white;
+  --splash-background-fallback: #000;
+  --button-default-color: black;
+  --button-light-color: black;
+  --button-active-background: #00cfff;
+  --button-default-background: white;
+  --button-light-background: white;
+  --button-disabled-border-color: #939393;
+  --button-disabled-color: #939393;
+  --button-disabled-background: rgba(0, 0, 0, 0);
+  --button-inverted-color: white;
+  --button-inverted-background: black;
+  --notification-background: #ff4545;
+  --notification-color: white;
+  --base-action-center-title-color: white;
+  --base-action-center-color: white;
+  --base-action-center-active: #00cfff;
+  --base-action-center-background: #000000;
+  --base-subtitle-color: white;
+  --base-subtitle-background-color: black;
+  --base-subtitle-drop-shadow-color: rgba(0, 0, 0, 0.2509803922);
+  --base-main-background: #d9d9d9;
+  --base-content-boxshadow: rgba(0, 0, 0, 0.1019607843);
+  --footer-background-color: black;
+  --footer-font-color: white;
+  --base-pages-nav-background: black;
+  --base-nav-area-color: white;
+  --base-nav-area-active-color: #00cfff;
+  --base-nav-area-current-color: #00cfff;
+  --base-nav-area-current-inverted-color: black;
+  --forms-landinginput-input-color: white;
+  --forms-landinginput-input-border-color: white;
+  --forms-landinginput-label-color: rgba(255, 255, 255, 0.7);
+  --login-heading-color: white;
+  --login-cancel-color: white;
+  --login-cancel-active-color: #00cfff;
+  --login-instructions-color: white;
+  --login-code-color: white;
+  --chatmessage-color: black;
+  --chatmessage-background: white;
+  --chatmessage-me-background: #a8efff;
+  --chatmessage-voted-icon-fill: #02db63;
+  --chatmessage-unvoted-icon-stroke: black;
+  --chataction-message-color: black;
+  --chataction-message-background: white;
+  --chataction-add-stroke: white;
+  --chataction-send-icon: white;
+  --chataction-rooms-background: white;
+  --chatmessage-room-button-background: white;
+  --chatmessage-room-button-color: black;
+  --agenda-base-background: white;
+  --agenda-base-color: black;
+  --agenda-base-bookmark-stroke: black;
+  --agenda-base-bookmark-stroke-active: #00cfff;
+  --agenda-expired-background: #eaeaea;
+  --agenda-expired-border-color: #ababab;
+  --agenda-feedback-background: #eaeaea;
+  --agenda-feedback-star-active: #00cfff;
+  --agenda-feedback-modal-background: white;
+  --agenda-footer-color: #717171;
+  --agenda-expired-color: #4d4d4d;
+  --agendaitem-speaker-background: #f7f7f7;
+  --agendaitem-speaker-active-background: #00cfff;
+  --speaker-profile-back-active: #00cfff;
+  --speaker-profile-speaker-background: #fff;
+  --speaker-profile-socials-active: #00cfff;
+  --speaker-profile-color: black;
+  --about-color: black;
+  --speaker-profile-back-circle: #bcbcbc;
+  --settings-light-mode-active: #ffa719;
+  --settings-dark-mode-active: #00cfff;
+  --settings-dark-mode-highlight-background: #d3d3d3;
+  --settings-light-mode-highlight-background: #252525;
+  --welcome-heading-color: white;
+  --welcome-cancel-color: white;
+  --welcome-cancel-color-active: #00cfff;
+  --welcome-person-color: white;
+  --map-legend-color: black;
+  --agenda-feedback-star-inactive: black;
+  --agenda-feedback-color: black;
+  --agenda-expired-speaker-background: #f7f7f7;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --button-default-color: white;
+    --button-default-background: black;
+    --button-inverted-color: black;
+    --button-inverted-background: white;
+    --notification-color: black;
+    --base-subtitle-color: white;
+    --base-subtitle-background-color: black;
+    --base-main-background: #2e2e2e;
+    --chatmessage-color: white;
+    --chatmessage-background: black;
+    --chatmessage-me-background: #00667d;
+    --chatmessage-unvoted-icon-stroke: white;
+    --agenda-base-background: black;
+    --agenda-base-color: white;
+    --agenda-base-bookmark-stroke: white;
+    --agenda-expired-background: #434343;
+    --agenda-expired-border-color: #737373;
+    --agenda-expired-color: #c2c2c2;
+    --agendaitem-speaker-background: #1a1a1a;
+    --speaker-profile-speaker-background: black;
+    --speaker-profile-color: white;
+    --chataction-message-color: white;
+    --chataction-message-background: black;
+    --chataction-add-stroke: black;
+    --chataction-send-icon: black;
+    --chataction-rooms-background: black;
+    --about-color: white;
+    --speaker-profile-back-circle: #222;
+    --chatmessage-room-button-background: black;
+    --chatmessage-room-button-color: white;
+    --map-legend-color: white;
+    --agenda-feedback-star-inactive: white;
+    --agenda-feedback-modal-background: black;
+    --agenda-feedback-color: white;
+    --agenda-feedback-background: #151515;
+    --agenda-footer-color: #b3b3b3;
+    --agenda-expired-speaker-background: #292929;
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --button-default-color: black;
+    --button-default-background: white;
+    --button-inverted-color: white;
+    --button-inverted-background: black;
+    --notification-color: white;
+    --base-subtitle-color: white;
+    --base-subtitle-background-color: black;
+    --base-main-background: #d9d9d9;
+    --chatmessage-color: black;
+    --chatmessage-background: white;
+    --chatmessage-me-background: #a8efff;
+    --chatmessage-unvoted-icon-stroke: black;
+    --chataction-rooms-background: white;
+    --agenda-base-background: white;
+    --agenda-base-color: black;
+    --agenda-base-bookmark-stroke: black;
+    --agenda-expired-background: #eaeaea;
+    --agenda-expired-border-color: #ababab;
+    --agenda-feedback-background: #eaeaea;
+    --agendaitem-speaker-background: #f7f7f7;
+    --speaker-profile-speaker-background: #fff;
+    --speaker-profile-color: black;
+    --speaker-profile-back-circle: #bcbcbc;
+    --chataction-message-color: black;
+    --chataction-message-background: white;
+    --chataction-add-stroke: white;
+    --chataction-send-icon: white;
+    --about-color: black;
+    --chatmessage-room-button-background: white;
+    --chatmessage-room-button-color: black;
+    --map-legend-color: black;
+    --agenda-feedback-star-inactive: black;
+    --agenda-feedback-modal-background: white;
+    --agenda-feedback-color: black;
+    --agenda-footer-color: #717171;
+    --agenda-expired-speaker-background: #f7f7f7;
+  }
+}
+/*
+$base-notification-font-size: 0.5rem;
+*/
+@layer reset, base, color, font, structural, theme, overrides;
+@layer color {
+  :root {
+    /*global colors that dont change */
+    --global-active: #00cfff;
+    --global-btn-active-bgc: var(--global-active);
+    --global-btn-active-clr: black;
+    --global-disabled: #A0A0A0;
+  }
+}
+@layer structural {
+  html {
+    padding: 0;
+    position: fixed;
+    top: env(safe-area-inset-top, 0);
+    left: env(safe-area-inset-left, 0);
+    right: env(safe-area-inset-right, 0);
+    bottom: env(safe-area-inset-bottom, 0);
+    &:not(:has(#map-root, #chat-selection)) {
+      touch-action: none;
+    }
+    body {
+      display: block;
+      padding: 0;
+      margin: 0;
+      min-height: 100dvh;
+      width: auto;
+      position: relative;
+      /*background-color: var(--base-main-background);*/
+      div.viewport-inner {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        height: 100dvh;
+        background-color: var(--base-main-background);
+        position: relative;
+        main {
+          flex-grow: 1;
+          overflow-y: none;
+          background-color: var(--base-main-background);
+          position: relative;
+          overflow: hidden;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+/*@use "./chat/room-controls.css";*/
+:where(body:has(#chat-selection)) #action-bar {
+  display: sticky;
+}
+div#chat-selection {
+  pointer-events: auto;
+  display: block;
+  height: 100%;
+  overflow: hidden;
+}
+div#chat-selection div.overflow-wrapper {
+  box-sizing: border-box;
+  height: 100%;
+  padding-top: 1rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  scrollbar-gutter: stable;
+  touch-action: none;
+}
+div#chat-selection div.overflow-wrapper div.chat-messages {
+  min-height: calc(100% + 1px);
+  justify-content: end;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: auto;
+}
+div#chat-selection div.overflow-wrapper div.chat-messages::after {
+  content: "";
+  height: var(--chat-padding, 130px);
+  width: 100%;
+  display: block;
+}
+@supports (scrollbar-color: auto) {
+  div#chat-selection div.overflow-wrapper {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(128, 128, 128, 0.5019607843) rgba(170, 187, 204, 0);
+  }
+}
+div#chat-selection > div#chatcontrols {
+  margin-inline: 1rem;
+  bottom: var(--cha-bottom);
+}
+div.chatmessage-wrapper {
+  background: var(--chatmessage-background);
+  display: grid;
+  grid-template-columns: 1fr;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0px 1px 5px 0px var(--base-content-boxshadow);
+  color: var(--chatmessage-color);
+  height: fit-content;
+  opacity: 0;
+  animation: fadeIn 300ms forwards;
+  gap: 1rem;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Start from fully transparent */
+  }
+  to {
+    opacity: 1; /* End at fully opaque */
+  }
+}
+div.chatmessage-wrapper.me {
+  background: var(--chatmessage-me-background);
+}
+div.chatmessage-wrapper div.chatmessage-header {
+  display: grid;
+  grid-template-columns: 1.571rem 1fr auto;
+  align-items: center;
+  font-size: 1.143rem;
+  font-weight: 600;
+  line-height: normal;
+}
+div.chatmessage-wrapper div.chatmessage-header img {
+  height: 1.571rem;
+  width: 1.571rem;
+}
+div.chatmessage-wrapper div.chatmessage-header h2 {
+  margin: 0px;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  margin-left: 0.5rem;
+}
+div.chatmessage-wrapper div.chatmessage-header div {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  margin-left: auto;
+  cursor: pointer;
+}
+div.chatmessage-wrapper div.chatmessage-header div:hover path, div.chatmessage-wrapper div.chatmessage-header div:active path {
+  stroke: var(--chatmessage-voted-icon-fill);
+}
+div.chatmessage-wrapper div.chatmessage-header div svg {
+  height: 2.142rem;
+  width: 2.142rem;
+}
+div.chatmessage-wrapper div.chatmessage-header div svg path {
+  stroke: var(--chatmessage-unvoted-icon-stroke);
+}
+div.chatmessage-wrapper div.chatmessage-header div.voted svg {
+  fill: var(--chatmessage-voted-icon-fill);
+}
+div.chatmessage-wrapper div.chatmessage-header div.voted svg path {
+  stroke: var(--chatmessage-voted-icon-fill);
+}
+div.chatmessage-wrapper p.chatmessage-message {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: normal;
+  overflow-wrap: anywhere;
+}
+div.agendaitem-base {
+  background: var(--agenda-base-background);
+  color: var(--agenda-base-color);
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.714rem;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.1019607843);
+}
+div.agendaitem-base .header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 1ch;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0%;
+  line-height: normal;
+  align-items: center;
+}
+div.agendaitem-base .header svg path {
+  height: 1.15rem;
+  margin-right: 1ch;
+  stroke: var(--agenda-base-color);
+}
+div.agendaitem-base .header a {
+  margin-left: auto;
+  align-items: center;
+}
+div.agendaitem-base h2 {
+  margin: 0;
+  font-size: 1.142rem;
+  font-weight: 700;
+  letter-spacing: 0%;
+  line-height: normal;
+}
+div.agendaitem-base h2 span.light {
+  font-weight: 400;
+}
+div.expired.agendaitem-base {
+  background-color: var(--agenda-expired-background);
+}
+div.expired.agendaitem-base .header {
+  color: var(--agenda-expired-color);
+}
+div.expired.agendaitem-base .header .time {
+  display: none;
+  visibility: hidden;
+}
+div.expired.agendaitem-base .header::after {
+  content: "Ended";
+  display: inline-block;
+}
+div.expired.agendaitem-base .header svg * {
+  stroke: var(--agenda-expired-color);
+}
+div.expired.agendaitem-base h2 {
+  color: var(--agenda-expired-color);
+}
+div.expired.agenda-light {
+  background-color: var(--agenda-expired-background);
+}
+div.expired.agenda-light .header {
+  color: var(--agenda-expired-color);
+}
+div.expired.agenda-light .header .time {
+  display: none;
+  visibility: hidden;
+}
+div.expired.agenda-light .header::after {
+  content: "Ended";
+  display: inline-block;
+}
+div.expired.agenda-light .header svg * {
+  stroke: var(--agenda-expired-color);
+}
+div.expired.agenda-feedback-complete .review {
+  color: var(--agenda-expired-color);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+div.expired.agenda-feedback-complete .review div {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: normal;
+}
+div.expired.agenda-feedback-complete .review a {
+  display: block;
+  margin-left: auto;
+  font-size: 0.857rem;
+  font-weight: 300;
+  line-height: normal;
+}
+div.expired.agenda-feedback-complete .review a:hover, div.expired.agenda-feedback-complete .review a:active {
+  color: var(--agenda-feedback-star-active);
+  cursor: pointer;
+}
+div.expired.agenda-item.agenda-item.agenda-item.agenda-item.agenda-item.agenda-item.agenda-item.agenda-item.agenda-item span {
+  color: var(--agenda-expired-color);
+}
+div.expired.agenda-item.agenda-item.agenda-item.agenda-item.agenda-item.agenda-item.agenda-item.agenda-item.agenda-item .agenda-description + svg path {
+  stroke: var(--agenda-expired-color);
+}
+div.agenda-item a.speaker-profile {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+div.agenda-item a.speaker-profile > img {
+  height: 4.142rem;
+}
+div.agenda-item label {
+  margin-top: 0.5rem;
+}
+div.agenda-item label input {
+  visibility: hidden;
+  display: none;
+}
+div.agenda-item label span.agenda-description {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  line-clamp: 2;
+  width: calc(100% - (25px + 1ch));
+  color: var(--agenda-base-color);
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 120%;
+  letter-spacing: 0%;
+}
+div.agenda-item label span.agenda-description:not(.chevron) + svg {
+  display: none;
+  visibility: none;
+}
+div.agenda-item label input:checked ~ div > span {
+  -webkit-line-clamp: unset;
+  line-clamp: unset;
+}
+div.agenda-item label input ~ div {
+  position: relative;
+}
+div.agenda-item label input ~ div svg {
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: center;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 1rem;
+  width: 1rem;
+  padding-right: 1.5ch;
+  padding-left: 0;
+}
+div.agenda-item label input ~ div svg path {
+  stroke: var(--agenda-base-color);
+}
+div.agenda-item label input:checked ~ div svg {
+  transform: rotate(180deg);
+  padding-left: 1.5ch;
+  padding-right: 0;
+}
+div.agenda-item:not(.expired) form {
+  display: none;
+  visibility: hidden;
+}
+div.agenda-item form {
+  display: flex;
+  flex-direction: column;
+}
+div.agenda-item form div.label {
+  direction: ltr;
+  display: inline;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 120%;
+}
+div.agenda-item form div {
+  direction: rtl;
+  display: inline-flex;
+  justify-content: flex-end;
+  gap: 14px;
+}
+div.agenda-item form div label {
+  height: 30px;
+  width: 30px;
+}
+div.agenda-item form div label svg,
+div.agenda-item form div label path {
+  stroke: var(--agenda-feedback-star-inactive);
+}
+div.agenda-item form div label input[type=radio] {
+  height: 0;
+  width: 0;
+  position: absolute;
+}
+div.agenda-item form div label:active svg path,
+div.agenda-item form div label:hover svg path,
+div.agenda-item form div label:active ~ label svg path,
+div.agenda-item form div label:hover ~ label svg path {
+  stroke: var(--agenda-feedback-star-active);
+}
+div.agenda-item form div label:has(input:checked) ~ label:active ~ label svg path,
+div.agenda-item form div label:has(input:checked) ~ label:active svg path, div.agenda-item form div label:has(input:checked) ~ label:hover ~ label svg path,
+div.agenda-item form div label:has(input:checked) ~ label:hover svg path {
+  stroke: var(--agenda-feedback-star-inactive);
+}
+div.agenda-item form div label:has(input:checked) ~ label svg path,
+div.agenda-item form div label:has(input:checked) svg path {
+  stroke: var(--agenda-feedback-star-active);
+  fill: var(--agenda-feedback-star-active);
+}
+div.agenda-footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  color: var(--agenda-footer-color);
+  font-size: 0.857rem;
+  font-weight: 500;
+}
+div.agenda-footer::before, div.agenda-footer::after {
+  content: "";
+  background-color: var(--agenda-footer-color);
+  display: inline-block;
+  height: 1px;
+  flex-grow: 1;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+div.agenda-upnext {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  color: var(--agenda-footer-color);
+  font-size: 0.857rem;
+  font-weight: 500;
+}
+div.agenda-upnext div:nth-child(1), div.agenda-upnext div:nth-child(3) {
+  content: "";
+  background-color: var(--agenda-footer-color);
+  display: inline-block;
+  height: 1px;
+  flex-grow: 1;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+div.agenda-upnext div:nth-child(4) {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+div#rating {
+  background: var(--agenda-feedback-modal-background);
+  width: 100%;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  border-radius: 1.42rem;
+  position: static;
+}
+div#rating.hidden {
+  visibility: hidden;
+  display: none;
+}
+div#rating form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+div#rating form div {
+  direction: rtl;
+  display: inline-flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  gap: 14px;
+}
+div#rating form div label svg, div#rating form div label path {
+  stroke: var(--agenda-feedback-star-inactive);
+}
+div#rating form div label input[type=radio] {
+  height: 0;
+  width: 0;
+  position: absolute;
+}
+div#rating form div label:active svg path, div#rating form div label:hover svg path, div#rating form div label:active ~ label svg path, div#rating form div label:hover ~ label svg path {
+  stroke: var(--agenda-feedback-star-active);
+}
+div#rating form div label:has(input:checked) ~ label:active ~ label svg path, div#rating form div label:has(input:checked) ~ label:active svg path, div#rating form div label:has(input:checked) ~ label:hover ~ label svg path, div#rating form div label:has(input:checked) ~ label:hover svg path {
+  stroke: var(--agenda-feedback-star-inactive);
+}
+div#rating form div label:has(input:checked) ~ label svg path, div#rating form div label:has(input:checked) svg path {
+  stroke: var(--agenda-feedback-star-active);
+  fill: var(--agenda-feedback-star-active);
+}
+div#rating form div input[type=radio] {
+  height: 0;
+  width: 0;
+  position: absolute;
+}
+div#rating form p {
+  margin: 0;
+  font-size: 1.42rem;
+  font-weight: 300;
+  color: var(--agenda-feedback-color);
+}
+div#rating form textarea {
+  background: var(--agenda-feedback-background);
+  border: none;
+  text-align: left;
+  border-radius: 1.42rem;
+  padding: 1rem;
+  direction: ltr;
+  overflow: auto;
+  min-height: clamp(150px, 30vh, 600px);
+  font-weight: 400;
+  color: var(--agenda-feedback-color);
+  font-size: max(16px, 1rem);
+}
+div#rating form textarea:focus-visible {
+  border: none;
+  outline: none;
+}
+div#rating form input[type=submit] {
+  box-sizing: border-box;
+  border: none;
+  color: var(--button-default-color);
+  background: var(--button-default-background);
+  font-weight: 600;
+  font-size: 1.7rem;
+  letter-spacing: 0%;
+  line-height: 100%;
+  text-decoration: none;
+  text-align: center;
+  padding-top: 1.1rem;
+  padding-bottom: 1.1rem;
+  border-radius: 2rem;
+}
+div#rating form input[type=submit].inverted {
+  background: var(--button-inverted-background);
+  color: var(--button-inverted-color);
+}
+div#rating form input[type=submit].light {
+  background: var(--button-light-background);
+  color: var(--button-light-color);
+}
+div#rating form input[type=submit]:hover, div#rating form input[type=submit]:active {
+  background: var(--button-active-background);
+}
+div#rating form:invalid input[type=submit] {
+  border: 1px solid var(--button-disabled-border-color);
+  color: var(--button-disabled-color);
+  background: var(--button-disabled-background);
+}
+div#rating form input[type=submit][disabled], div#rating form input[type=submit].light[disabled] {
+  border: 1px solid var(--button-disabled-border-color);
+  color: var(--button-disabled-color);
+  background: var(--button-disabled-background);
+}
+div#rating form input[type=reset] {
+  border: none;
+  padding: none;
+  background: none;
+  font-size: 1.428rem;
+  font-weight: 500;
+  color: var(--agenda-feedback-color);
+}
+div#rating form input[type=reset]:hover, div#rating form input[type=reset]:active {
+  color: var(--button-active-background);
+}
+div#agenda-modal {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  backdrop-filter: blur(6px);
+  z-index: 100;
+  padding-inline: 1rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  touch-action: auto;
+  pointer-events: auto;
+  overflow-y: auto;
+  padding-top: 1rem;
+  background: rgba(0, 0, 0, 0.0039215686);
+}
+@media (min-aspect-ratio: 0.8) and (min-height: 600px) {
+  div#agenda-modal {
+    width: 60dvh;
+    margin-inline: auto;
+  }
+}
+div#agenda-modal::after {
+  content: "";
+  height: 1.5rem;
+  width: 100%;
+  display: block;
+}
+div#agenda-modal > div {
+  overflow-y: auto;
+  max-height: 100%;
+  touch-action: auto;
+  pointer-events: all;
+}
+div#agenda-modal.hidden, div#agenda-modal .hidden {
+  visibility: hidden;
+  display: none;
+}
+div#speaker {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  gap: 1rem;
+  color: var(--speaker-profile-color);
+  background-color: var(--speaker-profile-speaker-background);
+  border-radius: 1.42rem;
+  padding: 2.142rem;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.1019607843);
+}
+div#speaker div.header {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+div#speaker div.header img,
+div#speaker div.header picture {
+  height: 6.07rem;
+  width: 6.07rem;
+}
+div#speaker div.header div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+div#speaker div.header div h2 {
+  font-size: 1.71rem;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+}
+div#speaker div.header div span {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: normal;
+}
+div#speaker div.copy {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 120%;
+}
+div#speaker div.copy p {
+  white-space: pre-wrap;
+}
+div#speaker div.copy > *:first-child {
+  margin-top: 0;
+}
+div#speaker div.copy > *:last-child {
+  margin-bottom: 0;
+}
+div#speaker div.footer {
+  display: flex;
+  flex-direction: column;
+}
+div#speaker div.footer > div {
+  display: flex;
+  flex-direction: row;
+}
+div#speaker div.footer > div svg {
+  margin-left: auto;
+}
+@media (prefers-color-scheme: dark) {
+  div#speaker div.footer > div svg {
+    filter: invert(0%);
+  }
+}
+div#speaker div.footer > div > div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 1rem;
+}
+div#speaker div.footer > div > div svg path {
+  stroke: var(--speaker-profile-color);
+}
+div#speaker div.footer > div > div a {
+  cursor: pointer;
+}
+div#speaker div.footer > div > div a:hover svg path,
+div#speaker div.footer > div > div a:active svg path {
+  stroke: var(--speaker-profile-socials-active);
+}
+div#speaker div.footer > div > div div {
+  width: 100%;
+  margin-bottom: 0.81rem;
+  font-size: 0.857rem;
+  font-weight: 600;
+  line-height: normal;
+}
+div#speaker div.footer a:active svg circle, div#speaker div.footer a:hover svg circle {
+  fill: var(--speaker-profile-back-active);
+}
+div#speaker a.back {
+  box-sizing: border-box;
+  border: none;
+  color: var(--button-default-color);
+  background: var(--button-default-background);
+  font-weight: 600;
+  font-size: 1.7rem;
+  letter-spacing: 0%;
+  line-height: 100%;
+  text-decoration: none;
+  text-align: center;
+  padding-top: 1.1rem;
+  padding-bottom: 1.1rem;
+  border-radius: 2rem;
+  width: 100%;
+}
+div#speaker a.back.inverted {
+  background: var(--button-inverted-background);
+  color: var(--button-inverted-color);
+}
+div#speaker a.back.light {
+  background: var(--button-light-background);
+  color: var(--button-light-color);
+}
+div#speaker a.back:hover, div#speaker a.back:active {
+  background: var(--button-active-background);
+}
+div#speaker a.back[disabled], div#speaker a.back.light[disabled] {
+  border: 1px solid var(--button-disabled-border-color);
+  color: var(--button-disabled-color);
+  background: var(--button-disabled-background);
+}
+@layer font {
+  :root {
+    --speaker-mini-radius: 4.142rem;
+    --speaker-mini-title-fs: 1.142rem;
+    --speaker-mini-title-fw: 600;
+    --speaker-mini-title-lh: 100%;
+    --speaker-mini-subtitle-fs: 0.857rem;
+    --speaker-mini-subtitle-fw: 300;
+    --speaker-mini-subtitle-lh: 100%;
+  }
+}
+@layer structural {
+  .speaker-wrapper {
+    display: flex;
+    .speaker-profile {
+      position: relative;
+      picture {
+        height: var(--speaker-mini-radius);
+        width: var(--speaker-mini-radius);
+        border-radius: var(--speaker-mini-radius);
+        overflow: hidden;
+        position: relative;
+        z-index: 2;
+        flex-shrink: 0;
+        img {
+          height: inherit;
+          width: inherit;
+        }
+      }
+    }
+    svg {
+      flex-shrink: 0;
+    }
+  }
+}
+@layer normal {
+  .speaker-wrapper {
+    flex-direction: column;
+    gap: 4px;
+    &:empty {
+      display: none;
+    }
+    .speaker-profile {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      flex-grow: 1;
+      gap: 1rem;
+      align-items: center;
+      height: var(--speaker-mini-radius);
+      border-radius: var(--speaker-mini-radius);
+      overflow: hidden;
+      z-index: 0;
+      touch-action: manipulation;
+      &::after {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        display: block;
+        right: 0;
+        background-color: var(--agendaitem-speaker-background);
+        left: calc(var(--speaker-mini-radius) / 2);
+        content: "";
+        z-index: -1;
+      }
+      &::before {
+        position: absolute;
+        margin: 1px;
+        height: calc(var(--speaker-mini-radius) - 2px);
+        width: calc(var(--speaker-mini-radius) - 2px);
+        border-radius: calc(var(--speaker-mini-radius) - 2px);
+        content: "";
+        background-color: #00cfff;
+        z-index: -1;
+      }
+      &:active::after, &:active::before {
+        background-color: var(--agendaitem-speaker-active-background);
+      }
+      .speaker-info {
+        line-height: 1;
+        .speaker-info__name {
+          margin: 0;
+          font-size: var(--speaker-mini-title-fs);
+          font-weight: var(--speaker-mini-title-fw);
+          line-height: var(--speaker-mini-title-lh);
+        }
+        .speaker-info__title {
+          display: inline-block;
+          margin-right: 1ch;
+          font-size: var(--speaker-mini-subtitle-fs);
+          font-weight: var(--speaker-mini-subtitle-fw);
+        }
+      }
+      svg {
+        margin-left: auto;
+        margin-right: 1rem;
+        path,
+        use {
+          stroke: var(--agenda-base-color);
+        }
+      }
+    }
+  }
+  @media (hover: hover) {
+    .speaker-profile {
+      &:hover {
+        &::after,
+        &::before {
+          background-color: var(--agendaitem-speaker-active-background);
+        }
+      }
+    }
+  }
+  @media (hover: none) {
+    .speaker-profile {
+      &:hover::after {
+        animation: blink 300ms ease-in-out 1;
+      }
+    }
+    @keyframes blink {
+      0% {
+        background-color: var(--agendaitem-speaker-background);
+      }
+      50% {
+        background-color: var(--agendaitem-speaker-active-background);
+      }
+      100% {
+        background-color: var(--agendaitem-speaker-background);
+      }
+    }
+  }
+}
+@layer expired {
+  :where(div.agenda-item.expired) .speaker-wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+    --subtitle-speaker-wrapper-stack-margin: 1rem;
+    padding-left: var(--subtitle-speaker-wrapper-stack-margin);
+    position: static;
+    order: revert;
+    .speaker-profile {
+      display: block;
+      position: relative;
+      overflow: visible;
+      margin-left: calc(var(--subtitle-speaker-wrapper-stack-margin) * -1);
+      width: calc(var(--speaker-mini-radius) + 4px);
+      height: calc(var(--speaker-mini-radius) + 4px);
+      flex: 0 0 auto;
+      picture img {
+        border: 2px solid var(--agendaitem-speaker-background);
+        border-radius: calc(var(--speaker-mini-radius) - 2px);
+        &:hover,
+        &:active {
+          border: 2px solid var(--agendaitem-speaker-active-background);
+        }
+      }
+      svg,
+      h3,
+      span,
+      &::after,
+      &::before {
+        display: none;
+        visibility: hidden;
+      }
+    }
+  }
+  @supports (z-index: sibling-index()) {
+    :where(div.agenda-item.expired) .speaker-wrapper {
+      width: calc(round(to-zero, 100% - 2rem, 1) / var(--speaker-mini-radius));
+      margin-left: 1rem;
+      a {
+        z-index: calc(100 - sibling-index());
+      }
+    }
+  }
+  @supports not (z-index: sibling-index()) {
+    @media (min-width: 511px) {
+      :where(div.agenda-item.expired) .speaker-wrapper {
+        width: calc(var(--speaker-mini-radius) * 8 - 1rem);
+        a.speaker-profile:nth-child(8n+1) {
+          z-index: 7;
+          margin-left: 0;
+        }
+        a.speaker-profile:nth-child(8n+2) {
+          z-index: 6;
+          margin-left: calc(var(--subtitle-speaker-wrapper-stack-margin) * -1);
+        }
+        a.speaker-profile:nth-child(8n+3) {
+          z-index: 5;
+          margin-left: calc(var(--subtitle-speaker-wrapper-stack-margin) * -1);
+        }
+        a.speaker-profile:nth-child(8n+4) {
+          z-index: 4;
+          margin-left: calc(var(--subtitle-speaker-wrapper-stack-margin) * -1);
+        }
+        a.speaker-profile:nth-child(8n+5) {
+          z-index: 3;
+          margin-left: calc(var(--subtitle-speaker-wrapper-stack-margin) * -1);
+        }
+        a.speaker-profile:nth-child(8n+6) {
+          z-index: 2;
+          margin-left: calc(var(--subtitle-speaker-wrapper-stack-margin) * -1);
+        }
+        a.speaker-profile:nth-child(8n+6) {
+          z-index: 1;
+          margin-left: calc(var(--subtitle-speaker-wrapper-stack-margin) * -1);
+        }
+        a.speaker-profile:nth-child(8n+0) {
+          z-index: 0;
+          margin-left: calc(var(--subtitle-speaker-wrapper-stack-margin) * -1);
+        }
+      }
+    }
+    @media (max-width: 510px) {
+      :where(div.agenda-item.expired) .speaker-wrapper {
+        width: calc(var(--speaker-mini-radius) * 7 - 1rem);
+        a.speaker-profile:nth-child(7n+1) {
+          z-index: 6;
+          margin-left: 0;
+        }
+        a.speaker-profile:nth-child(7n+2) {
+          z-index: 5;
+          margin-left: calc(var(--subtitle-speaker-wrapper-stack-margin) * -1);
+        }
+        a.speaker-profile:nth-child(7n+3) {
+          z-index: 4;
+          margin-left: calc(var(--subtitle-speaker-wrapper-stack-margin) * -1);
+        }
+        a.speaker-profile:nth-child(7n+4) {
+          z-index: 3;
+          margin-left: calc(var(--subtitle-speaker-wrapper-stack-margin) * -1);
+        }
+        a.speaker-profile:nth-child(7n+5) {
+          z-index: 2;
+          margin-left: calc(var(--subtitle-speaker-wrapper-stack-margin) * -1);
+        }
+        a.speaker-profile:nth-child(7n+6) {
+          z-index: 1;
+          margin-left: calc(var(--subtitle-speaker-wrapper-stack-margin) * -1);
+        }
+        a.speaker-profile:nth-child(7n+0) {
+          z-index: 0;
+          margin-left: calc(var(--subtitle-speaker-wrapper-stack-margin) * -1);
+        }
+      }
+    }
+    @media (max-width: 450px) {
+      :where(div.agenda-item.expired) .speaker-wrapper {
+        width: calc(var(--speaker-mini-radius) * 6 - 1rem);
+        a.speaker-profile:nth-child(6n+1) {
+          z-index: 5;
+          margin-left: 0;
+        }
+        a.speaker-profile:nth-child(6n+2) {
+          z-index: 4;
+          margin-left: calc(var(--subtitle-speaker-wrapper-stack-margin) * -1);
+        }
+        a.speaker-profile:nth-child(6n+3) {
+          z-index: 3;
+          margin-left: calc(var(--subtitle-speaker-wrapper-stack-margin) * -1);
+        }
+        a.speaker-profile:nth-child(6n+4) {
+          z-index: 2;
+          margin-left: calc(var(--subtitle-speaker-wrapper-stack-margin) * -1);
+        }
+        a.speaker-profile:nth-child(6n+5) {
+          z-index: 1;
+          margin-left: calc(var(--subtitle-speaker-wrapper-stack-margin) * -1);
+        }
+        a.speaker-profile:nth-child(6n+0) {
+          z-index: 0;
+          margin-left: calc(var(--subtitle-speaker-wrapper-stack-margin) * -1);
+        }
+      }
+    }
+    @media (max-width: 390px) {
+      :where(div.agenda-item.expired) .speaker-wrapper {
+        width: calc(var(--speaker-mini-radius) * 5 - 1rem);
+        a.speaker-profile:nth-child(5n+1) {
+          z-index: 4;
+          margin-left: 0;
+        }
+        a.speaker-profile:nth-child(5n+2) {
+          z-index: 3;
+          margin-left: calc(var(--subtitle-speaker-wrapper-stack-margin) * -1);
+        }
+        a.speaker-profile:nth-child(5n+3) {
+          z-index: 2;
+          margin-left: calc(var(--subtitle-speaker-wrapper-stack-margin) * -1);
+        }
+        a.speaker-profile:nth-child(5n+4) {
+          z-index: 1;
+          margin-left: calc(var(--subtitle-speaker-wrapper-stack-margin) * -1);
+        }
+        a.speaker-profile:nth-child(5n+0) {
+          z-index: 0;
+          margin-left: calc(var(--subtitle-speaker-wrapper-stack-margin) * -1);
+        }
+      }
+    }
+    @media (max-width: 359px) {
+      :where(div.agenda-item.expired) .speaker-wrapper {
+        width: calc(var(--speaker-mini-radius) * 4 - 1rem);
+        a.speaker-profile:nth-child(4n+1) {
+          z-index: 4;
+          margin-left: 0;
+        }
+        a.speaker-profile:nth-child(4n+2) {
+          z-index: 3;
+          margin-left: calc(var(--subtitle-speaker-wrapper-stack-margin) * -1);
+        }
+        a.speaker-profile:nth-child(4n+3) {
+          z-index: 2;
+          margin-left: calc(var(--subtitle-speaker-wrapper-stack-margin) * -1);
+        }
+        a.speaker-profile:nth-child(4n+0) {
+          z-index: 1;
+          margin-left: calc(var(--subtitle-speaker-wrapper-stack-margin) * -1);
+        }
+      }
+    }
+  }
+}
+div#agenda-root {
+  padding-inline: 1rem;
+  /*overflow-y: scroll;
+  max-height: 100%;*/
+  position: relative;
+  z-index: 0;
+}
+@supports (scrollbar-color: auto) {
+  div#agenda-root {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(128, 128, 128, 0.5019607843) rgba(170, 187, 204, 0);
+  }
+}
+div#agenda-root > div:not(.shim) {
+  margin-top: 1rem;
+  /* lower actionbar + footer */
+  margin-bottom: 7rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 1rem;
+}
+div#agenda-root .shim {
+  width: 100%;
+  height: 2px;
+}
+@layer theme {
+  html:has(#agenda-root) {
+    all: unset;
+    height: 100%;
+    font-size: 14px;
+  }
+  html:has(#agenda-root) body {
+    all: unset;
+    min-height: 100%;
+    font-size: 14px;
+    overflow-y: scroll;
+    background-color: var(--base-main-background);
+  }
+  html:has(#agenda-root) body div.viewport-inner {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  html:has(#agenda-root) body div.viewport-inner .simulator {
+    width: 100%;
+    height: 11000px;
+    background: rgba(255, 255, 0, 0.2);
+  }
+  html:has(#agenda-root) body div.viewport-inner nav#action-center {
+    width: 100%;
+  }
+  html:has(#agenda-root) body div.viewport-inner main#content {
+    height: unset;
+    min-height: 100%;
+  }
+  html:has(#agenda-root) body nav#action-bar {
+    position: sticky;
+    overflow: hidden;
+    /*transform: translateY(0%);*/
+    margin-top: -72px;
+    -webkit-overflow-scrolling: none;
+  }
+}
+div#settings-root {
+  display: flex;
+  height: 100%;
+  margin-top: -4rem;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 0;
+}
+div#settings-root label {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-height: 50vh;
+}
+div#settings-root label input {
+  height: 0px;
+  width: 0px;
+}
+div#settings-root label input ~ div.button {
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+div#settings-root label input ~ div.button div.button-side {
+  display: flex;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: normal;
+  background-clip: text;
+  align-items: center;
+  height: 100%;
+}
+div#settings-root label input ~ div.button div.button-side div.region {
+  background: unset;
+  height: 100%;
+  position: relative;
+  max-width: 80px;
+  width: 12vh;
+}
+div#settings-root label input ~ div.button div.button-side div.region div.shadow {
+  position: absolute;
+  inset: 3px;
+  z-index: 0;
+}
+div#settings-root label input ~ div.button div.button-side div.region .inner {
+  z-index: 1;
+  height: 100%;
+  background: var(--base-main-background);
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+div#settings-root label input ~ div.button div.button-side.darkside {
+  flex-direction: column;
+}
+div#settings-root label input ~ div.button div.button-side.darkside div.region {
+  border-radius: 2.5rem 2.5rem 0 0;
+  margin-top: 2rem;
+}
+div#settings-root label input ~ div.button div.button-side.darkside div.region .inner {
+  border-radius: 2.5rem 2.5rem 0 0;
+}
+div#settings-root label input ~ div.button div.button-side.darkside div.region .inner svg {
+  margin-top: 2rem;
+}
+div#settings-root label input ~ div.button div.button-side.darkside div.region .shadow {
+  transform-origin: bottom center;
+  border-radius: 2.5rem 2.5rem 3rem 3rem;
+}
+div#settings-root label input ~ div.button div.button-side.lightside {
+  flex-direction: column-reverse;
+}
+div#settings-root label input ~ div.button div.button-side.lightside div.region {
+  border-radius: 0 0 2.5rem 2.5rem;
+  margin-bottom: 2rem;
+}
+div#settings-root label input ~ div.button div.button-side.lightside div.region .inner {
+  flex-direction: column-reverse;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 0 0 2.5rem 2.5rem;
+}
+div#settings-root label input ~ div.button div.button-side.lightside div.region .inner svg {
+  margin-bottom: 2rem;
+}
+div#settings-root label input ~ div.button div.button-side.lightside div.region .shadow {
+  transform-origin: top center;
+  border-radius: 3rem 3rem 2.5rem 2.5rem;
+}
+div#settings-root label input#setting-set:checked + input:checked ~ div div.lightside > svg path {
+  fill: var(--settings-light-mode-active);
+}
+div#settings-root label input#setting-set:checked + input:checked ~ div div.lightside div.region svg path {
+  stroke: var(--settings-light-mode-active);
+}
+div#settings-root label input#setting-set:checked + input:checked ~ div div.lightside div.region div.inner {
+  position: relative;
+  box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.5);
+  background: var(--base-main-background);
+}
+div#settings-root label input#setting-set:checked + input:checked ~ div div.lightside div.region div.inner svg g * {
+  filter: url(#light-glow);
+}
+div#settings-root label input#setting-set:checked + input:checked ~ div div.lightside div.region div.inner::before {
+  position: absolute;
+  content: "";
+  top: -5px;
+  bottom: calc(100% - 3px);
+  left: 0px;
+  right: 0px;
+  background: linear-gradient(0deg, var(--base-main-background) 0%, var(--base-main-background) 40%, #d3d2d2 60%, rgba(211, 210, 210, 0.2) 100%);
+}
+div#settings-root label input#setting-set:checked + input:checked ~ div div.darkside div.region div.inner {
+  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.2), 2px 2px 1px 0px rgba(255, 255, 255, 0.4666666667) inset;
+  background: #d3d2d2;
+}
+div#settings-root label input#setting-set:checked + input:checked ~ div div.darkside div.region div.inner svg g * {
+  filter: url(#darkmode-glow-off);
+}
+div#settings-root label input#setting-set:checked + input:checked ~ div div.darkside div.region div.positive {
+  background-color: rgba(0, 0, 0, 0.527);
+  filter: blur(5px);
+  transform: skewX(-4deg);
+}
+div#settings-root label input#setting-set:checked + input:checked ~ div div.darkside div.region div.negitive {
+  background-color: rgba(250, 214, 170, 0.518);
+  filter: blur(8px);
+  transform: skewX(4deg);
+}
+div#settings-root label input#setting-set:checked + input:not(:checked) ~ div div.darkside > svg path {
+  fill: var(--settings-dark-mode-active);
+}
+div#settings-root label input#setting-set:checked + input:not(:checked) ~ div div.darkside div.region svg path {
+  stroke: var(--settings-dark-mode-active);
+}
+div#settings-root label input#setting-set:checked + input:not(:checked) ~ div div.darkside div.inner {
+  box-shadow: -1px 1px 1.5px 0px rgba(250, 250, 250, 0.233), 1px 0px 1.5px 0px black inset, 1px 0px 2px 0px black;
+}
+div#settings-root label input#setting-set:checked + input:not(:checked) ~ div div.darkside div.inner svg g * {
+  filter: url(#darkmode-glow);
+}
+div#settings-root label input#setting-set:checked + input:not(:checked) ~ div div.lightside div.region div.inner {
+  box-shadow: -2px -1.5px 1.5px 0px rgba(255, 255, 255, 0.2) inset, -1px 1px 3px 0px black;
+  background: var(--settings-light-mode-highlight-background);
+  position: relative;
+  overflow: visible;
+}
+div#settings-root label input#setting-set:checked + input:not(:checked) ~ div div.lightside div.region div.inner svg g * {
+  filter: url(#light-glow-off);
+}
+div#settings-root label input#setting-set:checked + input:not(:checked) ~ div div.lightside div.region div.inner::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  bottom: calc(100% - 3px);
+  background: linear-gradient(0deg, #262626 0%, #262626 50%, var(--base-main-background) 100%);
+  left: 0;
+  right: 0;
+  z-index: 3;
+}
+div#settings-root label input#setting-set:checked + input:not(:checked) ~ div div.lightside div.region div.positive {
+  background-color: black;
+  filter: blur(5px);
+  transform: skewX(-4deg);
+}
+div#settings-root label input#setting-set:checked + input:not(:checked) ~ div div.lightside div.region div.negitive {
+  background-color: rgba(131, 72, 0, 0.286);
+  filter: blur(5px);
+  transform: skewX(3.5deg);
+}
+div#map-root {
+  margin-top: 1rem;
+  padding-bottom: 0;
+  height: calc(100% - 1rem);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-inline: 1rem;
+}
+div#map-root div.modal {
+  visibility: hidden;
+  display: none;
+  position: absolute;
+}
+div#map-root div#zoom-container {
+  background: white;
+  border-radius: 1.42rem;
+  overflow: hidden;
+}
+div#map-root .map__explainer {
+  color: var(--map-legend-color);
+  font-size: 12px;
+  font-weight: 500;
+}
+div#map-root div.legend-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: 1rem;
+  gap: 2ch;
+  color: var(--map-legend-color);
+}
+div#map-root div.legend-container > div {
+  flex-basis: calc(50% - 1ch);
+  flex-shrink: 1;
+  display: flex;
+  flex-direction: row;
+  gap: 1ch;
+}
+div#map-root div.legend-container > div > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+div#map-root div.legend-container > div > div span.legend-heading {
+  font-size: 0.857rem;
+  font-weight: 700;
+}
+div#map-root div.legend-container > div > div span.legend-location {
+  font-size: 0.857rem;
+  font-weight: 500;
+}
+div#chatcontrols {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9;
+}
+div#chatcontrols form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  max-width: 100vw;
+  align-items: center;
+  gap: 1ch;
+  color: var(--chataction-message-color);
+  background: var(--chataction-message-background);
+  border-radius: 1.714rem;
+  padding-inline: 0.25rem;
+  padding-block: 0.25rem;
+  box-shadow: 0px 1px 5px 0px var(--base-content-boxshadow);
+  pointer-events: auto;
+}
+div#chatcontrols form input {
+  height: 0;
+  width: 0;
+}
+div#chatcontrols form label {
+  cursor: pointer;
+  padding: 0;
+  align-self: flex-start;
+}
+div#chatcontrols form label svg path {
+  stroke: var(--chataction-add-stroke);
+}
+div#chatcontrols form div[contenteditable] {
+  color: var(--chataction-message-color);
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 0%;
+  line-height: normal;
+  flex-grow: 1;
+  border: none;
+  background: unset;
+  overflow-y: auto;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  padding-left: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  max-height: 40vh;
+  pointer-events: auto;
+}
+div#chatcontrols form div[contenteditable]:focus-visible {
+  outline: none;
+  border: unset;
+}
+@supports (scrollbar-color: auto) {
+  div#chatcontrols form div[contenteditable] {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(128, 128, 128, 0.5019607843) rgba(170, 187, 204, 0);
+  }
+}
+div#chatcontrols form button {
+  align-self: self-end;
+  margin: 0.25rem;
+  pointer-events: auto;
+  border: none;
+  background: unset;
+  padding: 0;
+  margin: 0;
+  height: 2.857rem;
+  width: 2.857rem;
+  font-size: 16px;
+  cursor: pointer;
+}
+div#chatcontrols form button svg {
+  height: 2.857rem;
+  width: 2.857rem;
+  flex-shrink: 0;
+  pointer-events: auto;
+  cursor: inherit;
+  pointer-events: inherit;
+}
+div#chatcontrols form button svg path {
+  stroke: var(--chataction-send-icon);
+  fill: var(--chataction-send-icon);
+}
+@layer overrides {
+  html {
+    background-color: #111;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="2000"><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" stitchTiles="stitch"/><feColorMatrix in="noise" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0" /></filter><rect width="100%" height="100%" filter="url(%23noiseFilter)" opacity="0.5"/></svg>');
+    background-size: cover;
+  }
+  @media (min-aspect-ratio: 0.8) and (min-height: 600px) {
+    html {
+      body div.viewport-inner {
+        aspect-ratio: 0.6;
+        margin-inline: auto;
+        width: 56dvh;
+      }
+      nav#action-bar {
+        width: calc(56dvh - 2ch);
+        margin-inline: auto;
+      }
+    }
+  }
+  div#rotation-alert {
+    position: fixed;
+    inset: 0;
+    z-index: -1000;
+    opacity: 0;
+    &.show:not(.locked) {
+      z-index: 1000000;
+      background: rgba(0, 0, 0, 0.6666666667);
+      z-index: 10000000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(4px);
+      opacity: 1;
+      transition-duration: 300ms;
+      transition-property: opacity;
+      div {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        background: #333;
+        align-items: stretch;
+        border-radius: 3rem;
+        padding: 2rem;
+        max-width: 35vw;
+        text-align: center;
+        span {
+          display: block;
+          color: white;
+          font-size: 1.25rem;
+          &.exclamation {
+            font-size: 30vw;
+            color: black;
+            line-height: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+label.ui-slider {
+  position: relative;
+  display: inline-block;
+  height: 28px;
+  width: 50px;
+}
+label.ui-slider input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+label.ui-slider input:not(:checked) + div.slider-outer {
+  background: #2e2e2e;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.3) inset;
+}
+label.ui-slider input:not(:checked) + div.slider-outer div.slider-inner {
+  transform: translateX(100%);
+}
+label.ui-slider input:not(:checked) + div.slider-outer svg .ui-slider-nub * {
+  fill: black;
+}
+label.ui-slider input:not(:checked) + div.slider-outer svg .darkmode-moon * {
+  stroke: #00cfff;
+}
+label.ui-slider input:not(:checked) + div.slider-outer svg .lightmode-sun * {
+  display: none;
+}
+label.ui-slider input:checked + div.slider-outer {
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.3) inset;
+  background-color: #d9d9d9;
+}
+label.ui-slider input:checked + div.slider-outer svg .ui-slider-nub {
+  fill: white;
+}
+label.ui-slider input:checked + div.slider-outer svg .darkmode-moon * {
+  display: none;
+}
+label.ui-slider input:checked + div.slider-outer svg .lightmode-sun * {
+  stroke: #ffa719;
+  fill: #ffa719;
+}
+label.ui-slider input:checked + div.slider-outer div.slider-inner {
+  transform: translateX(0.2rem);
+}
+label.ui-slider div.slider-outer {
+  border-radius: 1.5rem;
+  position: absolute;
+  cursor: pointer;
+  height: 28px;
+  width: 50px;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  transition: 0.4s;
+  align-items: center;
+  display: flex;
+}
+label.ui-slider div.slider-outer div.slider-inner {
+  border-radius: 1.5rem;
+  display: block;
+  position: relative;
+  z-index: 2;
+  content: "";
+  height: 24px;
+  width: 24px;
+  transition: 0.4s;
+}
+label.ui-slider div.slider-outer div.slider-inner svg {
+  overflow: visible;
+}
+label.ui-slider div.slider-outer div.slider-inner svg .darkmode-moon,
+label.ui-slider div.slider-outer div.slider-inner svg .lightmode-sun {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+@layer font {
+  :root {
+    --top-nav-title-fs: 30px;
+    --top-nav-title-fw: 600;
+  }
+}
+@layer structural {
+  nav#action-center {
+    position: sticky;
+    left: 0;
+    top: 0;
+    isolation: isolate;
+    z-index: 10;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    div.bg {
+      position: absolute;
+      z-index: 0;
+      inset: 0;
+      picture {
+        display: block;
+        height: 100%;
+        width: 100%;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    div.nav-content {
+      z-index: 1;
+      height: 70px;
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      justify-items: center;
+      align-self: center;
+      h1 {
+        grid-column-start: 2;
+        margin-block: 1rem;
+      }
+      label {
+        grid-column-start: 3;
+        justify-self: right;
+        margin-right: 14px;
+        align-self: center;
+      }
+    }
+  }
+}
+@layer theme {
+  nav#action-center {
+    background-color: var(--base-action-center-background);
+    color: var(--base-action-center-color);
+    div.nav-content h1 {
+      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+      font-size: var(--top-nav-title-fs);
+      font-weight: var(--top-nav-title-fw);
+      color: var(--base-action-center-title-color);
+    }
+  }
+}
+.contentedai {
+  display: inline-flex;
+  align-items: center;
+  margin-inline: auto;
+  grid-column: span 2;
+  .contentedai__image {
+    height: 40px;
+    width: auto;
+  }
+  .contentedai__text {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 12px;
+    font-weight: 300;
+  }
+}
+@layer font {
+  :root {
+    --nav-fs: 12px;
+    --nav-fw: 400;
+    --nav-lh: normal;
+    --nav-active-fw: 700;
+  }
+}
+@layer base {
+  @supports (-moz-appearance: none) {
+    :has(:not(#agenda-root)) nav#action-bar {
+      &#action-bar {
+        position: absolute;
+        width: calc(100% - 20px);
+      }
+    }
+  }
+  nav#action-bar {
+    gap: 1ch;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    margin-inline: 0.357rem;
+    background-color: var(--base-pages-nav-background);
+    border-radius: 1.428rem;
+    align-items: center;
+    position: sticky;
+    height: var(--nac-height);
+    bottom: var(--nac-bottom);
+    display: var(--nav-display, grid);
+    visibility: var(--nav-visibility, visible);
+    pointer-events: none;
+    font-size: 14px;
+    a {
+      font-size: var(--nav-fs);
+      font-weight: var(--nav-fs);
+      line-height: var(--nav-lh);
+      color: var(--base-nav-area-color);
+      text-decoration: inherit;
+      padding-block: 0.5rem;
+      pointer-events: all;
+      &:hover {
+        color: #00cfff;
+      }
+      .nav-button {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+        justify-items: center;
+        .nav-button__svg {
+          height: 25px;
+          width: 25px;
+        }
+      }
+    }
+  }
+  @supports (-moz-appearance: none) {
+    nav#action-bar {
+      &#action-bar {
+        position: absolute;
+      }
+    }
+  }
+}
+@layer theme {
+  .current {
+    color: #00cfff;
+    .about-svg {
+      .about-svg__outer-rim {
+        fill: #00cfff;
+      }
+      .about-svg__i-stalk,
+      .about-svg__i-dot {
+        color: black;
+      }
+    }
+    .chat-svg {
+      .chat-svg__chat-bubble {
+        fill: #00cfff;
+      }
+      .chat-svg__line-top, .chat-svg__line-bottom {
+        stroke: black;
+      }
+    }
+    .map-svg {
+      .map-svg__rim {
+        fill: #00cfff;
+      }
+      .map-svg__line-left, .map-svg__line-right {
+        stroke: black;
+        transform: scaleY(2) translateY(-25%);
+      }
+    }
+    .agenda-svg {
+      .agenda-svg__rim {
+        fill: #00cfff;
+      }
+      .agenda-svg__hour, .agenda-svg__minute {
+        stroke: black;
+      }
+    }
+  }
+}
+:root {
+  --nac-height: 65px;
+  --nac-bottom: 0.25rem;
+  --cha-bottom: calc(var(--nac-height) + var(--nac-bottom) + 1rem) ;
+}

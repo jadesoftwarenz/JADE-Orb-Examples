@@ -1,0 +1,15 @@
+<div class="chatmessage-wrapper <$$ chat/me $$>" id="<@@ orb-id @@>" data-orb-id="<@@ orb-id @@>" aria-labelledby="<@@ orb-id @@>" role="article">
+  <div class="chatmessage-header">
+    <img alt="<@@ person_name @@>" src="/images/talkinghead.svg">
+    <h2 id="user-<@@ orb-id @@>"><@@ person_name @@></h2>
+    <!-- add class voted to show voted flag -->
+    <div class="<$$ voted $$>" aria-label="Upvoted by <@@ upvotes @@>" data-orb-trigger="upvote" data-orb-trigger-id="<@@ id @@>">
+    <$$ upvotes $$> 
+      <svg aria-hidden="true" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17.1643 21.1765H12.8362V15.7344H8.82349L15.0269 7.94116L21.1764 15.7344H17.1643V21.1765Z" stroke="black" stroke-linejoin="round"></path>
+      </svg>
+    </div>
+  </div>
+  <p class="chatmessage-message">
+    <@@ message @@>
+  </p></div>

@@ -1,0 +1,85 @@
+<speakers>
+<speaker>
+	<name>Alice Application</name>
+	<title>CEO, Acme Inc.</title>
+	<bio><![CDATA[As CEO of Acme Inc., Alice has led the company through rapid growth and innovation, focusing on creating technology solutions that simplify everyday business operations. She is known for her strategic vision and commitment to fostering diverse, high-performing teams.]]></bio>
+	<social>https://www.linkedin.com/company/jade-software-corporation/</social>
+</speaker>
+
+<speaker>
+	<name>Bob Blank</name>
+	<title>Digital Officer, Bank of Bankland</title>
+	<bio><![CDATA[Bob serves as Digital Officer at Bank of Bankland, where he drives digital transformation initiatives, from AI-powered services to mobile banking platforms. He has a passion for bridging traditional finance with modern technology to enhance customer experiences.]]></bio>
+	<social>https://www.linkedin.com/company/jade-software-corporation/</social>
+</speaker>
+
+<speaker>
+	<name>Christopher Prime</name>
+	<title>Prime Number</title>
+	<bio><![CDATA[Mathematician and thought leader exploring patterns and theory in numbers. He works to translate complex mathematical concepts into practical applications in data analysis, cryptography, and algorithm design.]]></bio>
+	<social>https://www.linkedin.com/company/jade-software-corporation/</social>
+</speaker>
+
+<speaker>
+	<name>David Demonstration</name>
+	<title>Director of Technology, Demoware</title>
+	<bio><![CDATA[As Director of Technology at Demoware, David oversees the development of scalable software solutions and cutting-edge prototypes. He specializes in turning technical innovation into practical tools that help organizations streamline operations.]]></bio>
+	<social>https://www.linkedin.com/company/jade-software-corporation/</social>
+</speaker>
+
+<speaker>
+	<name>Emma Epilog</name>
+	<title>Co-founder, Exemplar Enterprises</title>
+	<bio><![CDATA[Co-founder of Exemplar Enterprises, Emma is dedicated to building companies that combine innovation with social impact. She has a track record of launching successful ventures and mentoring early-stage founders in strategy, design, and growth.]]></bio>
+	<social>https://www.linkedin.com/company/jade-software-corporation/</social>
+</speaker>
+
+<speaker>
+	<name>Fred Filler</name>
+	<title>Tech Entrepreneur</title>
+	<bio><![CDATA[Fred is a serial tech entrepreneur with a focus on emerging technologies and disruptive business models. He enjoys turning creative ideas into market-ready products and thrives on exploring how technology can transform industries.]]></bio>
+	<social>https://www.linkedin.com/company/jade-software-corporation/</social>
+</speaker>
+
+<speaker>
+	<name>Greg Global</name>
+	<title>General Manager, Singleton Software</title>
+	<bio><![CDATA[As General Manager of Singleton Software, Greg manages operations, international expansion, and strategic partnerships. He brings a global perspective to business management and is passionate about aligning teams for operational excellence.]]></bio>
+	<social>https://www.linkedin.com/company/jade-software-corporation/</social>
+</speaker>
+
+<speaker>
+	<name>Harry Hypothetical</name>
+	<title>Technical Fellow, Theoretical Technologies</title>
+	<bio><![CDATA[Harry is a Technical Fellow at Theoretical Technologies, specializing in research and development of experimental technologies. He enjoys tackling abstract problems and translating theoretical concepts into innovative solutions.]]></bio>
+	<social>https://www.linkedin.com/company/jade-software-corporation/</social>
+</speaker>
+
+<speaker>
+	<name>Isabella Interface</name>
+	<title>Product Leader, Instance Industries</title>
+	<bio><![CDATA[Isabella leads product development at Instance Industries, where she drives user-centered design and manages cross-functional teams. She is passionate about creating intuitive, scalable products that meet evolving customer needs.]]></bio>
+	<social>https://www.linkedin.com/company/jade-software-corporation/</social>
+</speaker>
+
+<speaker>
+	<name>Jerry Jadrap</name>
+	<title>Head of Solutions, Server Incorporated</title>
+	<bio><![CDATA[Jerry heads the Solutions division at Server Incorporated, focusing on delivering enterprise-grade IT solutions. He is known for his ability to align technology with business goals and for guiding complex projects to successful completion.]]></bio>
+	<social>https://www.linkedin.com/company/jade-software-corporation/</social>
+</speaker>
+
+<speaker>
+	<name>Keith Kernel</name>
+	<title>Software Engineer, Corn Corporation</title>
+	<bio><![CDATA[Keith is a software engineer at Corn Corporation, developing robust systems and optimizing performance for high-demand applications. He has expertise in system architecture, coding efficiency, and solving complex technical challenges.]]></bio>      
+	<social>https://www.linkedin.com/company/jade-software-corporation/</social>
+</speaker>
+
+<speaker>
+	<name>Lauren Ipsum</name>
+	<title>Director of IT, Amet Consectetur</title>
+	<bio><![CDATA[Lauren Ipsum is Director of IT at Amet Consectetur. Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.]]></bio>
+	<social>https://www.linkedin.com/company/jade-software-corporation/</social>
+</speaker>
+</speakers>

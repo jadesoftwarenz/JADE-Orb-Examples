@@ -1,0 +1,18 @@
+<a class="speaker-profile" data-orb-trigger="/speakerprofile" data-orb-trigger-name="<@@ speaker_name @@>">
+    <div class="speaker-profile">
+      <picture>
+          <!--<source srcset="<%% photo avif %%>" type="image/avif">
+          <source srcset="<%% photo webp %%>" type="image/webp">-->
+          <source srcset="<%% photo png %%>" type="image/png">
+          <!-- PNG fallback -->
+          <img alt="<@@ speaker_name @@>" src="<%% photo png %%>">
+      </picture>
+      <div class="speaker-info">
+        <h3 class="speaker-info__name"><@@ speaker_name @@></h3>
+        <span class="speaker-info__title"><@@ speaker_title @@></span><span class="speaker-info__title"><@@ speaker_company @@></span>
+      </div>
+      <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1.09619 1L6.19239 6.0962L1.09619 11.1924" stroke="black" stroke-linecap="round"></path>
+      </svg>
+    </div>
+  </a>

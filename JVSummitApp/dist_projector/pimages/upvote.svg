@@ -1,0 +1,15 @@
+      <svg
+        aria-hidden="true"
+        width="30"
+        height="30"
+        viewBox="0 0 30 30"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+  <path
+    d="M18.933 26H11.067V17.2H4L15 2L26 17.2H18.933V26Z"
+    fill="#02DB63"
+    stroke="#02DB63"
+    stroke-linejoin="round"
+  />
+      </svg>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+  <head>
+    
+    <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+    <script src="https://unpkg.com/@panzoom/panzoom@4.6.0/dist/panzoom.min.js"></script>
+    <script src="/orb-script.js"></script>
+
+    <script src="/scripts/feature-flag.js"></script>
+    <script defer src="/scripts/style.js"></script>
+        <script defer type="module" src="/scripts/chatv2.js"></script>
+        <script src="/scripts/screen.js"></script>
+        <script src="/scripts/agendaElipsis.js"></script>
+        <script defer src="/scripts/modal.js"></script>
+     
+
+    <title><@@ section @@> | Jade Velocity 2025</title>
+
+<meta property="og:title" content="Jade Velocity Summit Chat">
+<meta property="og:description" content="Join developers, partners, and leaders at Jade Velocity 2025 on 29 August">
+<meta property="og:type" content="website">
+<meta property="og:url" content>
+<meta property="og:image" content="https://placehold.co/100x100/orange/white">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Your Page Title">
+<meta name="twitter:description" content="Join developers, partners, and leaders at Jade Velocity 2025 on 29 August">
+<meta name="twitter:image" content="https://placehold.co/100x100/orange/white">
+<meta name="twitter:site" content="@Jadesoftware">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, interactive-widget=resizes-content, minimal-ui">
+
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#000">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <script type="module">Orb.hooks.panzoom = function() {
+  const el = document.getElementById("zoom-target");
+  const panzoomCallback = () => {
+    const pel = document.getElementById("zoom-container");
+    const panzoom = Panzoom(el, {
+      maxScale: 3,
+      minScale: 0.5,
+      contain: "outside",
+      panOnlyWhenZoomed: true
+    });
+    el.addEventListener("wheel", panzoom.zoomWithWheel);
+    el.addEventListener("dblclick", (e) => {
+      let scale = panzoom.getScale();
+      scale = scale > 1.3 ? 1 : 2;
+      panzoom.zoomToPoint(scale, {
+        clientX: e.clientX,
+        clientY: e.clientY
+      });
+    });
+    pel.addEventListener("touchend", (e) => {
+      const now = Date.now();
+      const touch = e.changedTouches[0];
+      const tapX = touch.clientX;
+      const tapY = touch.clientY;
+      const DOUBLE_TAP_MAX_DELAY = 300;
+      const DOUBLE_TAP_MAX_DISTANCE = 30;
+      let lastTapTime = Number.parseFloat(pel.dataset.taptime);
+      const timeDiff = now - lastTapTime;
+      let lastTapX = Number.parseFloat(pel.dataset.tapx);
+      let lastTapY = Number.parseFloat(pel.dataset.tapy);
+      const distance = Math.hypot(tapX - lastTapX, tapY - lastTapY);
+      if (timeDiff < DOUBLE_TAP_MAX_DELAY && distance < DOUBLE_TAP_MAX_DISTANCE) {
+        e.preventDefault();
+        const scale = panzoom.getScale();
+        const nextScale = scale < 2 ? scale * 2 : 1;
+        panzoom.zoomToPoint(nextScale, {
+          clientX: tapX,
+          clientY: tapY
+        });
+        pel.dataset.taptime = `0`;
+      } else {
+        pel.dataset.taptime = `${now}`;
+        pel.dataset.tapx = `${tapX}`;
+        pel.dataset.tapy = `${tapY}`;
+      }
+    });
+  };
+  if (el.complete) {
+    panzoomCallback();
+  } else {
+    el.addEventListener("load", panzoomCallback);
+  }
+};</script>
+    <script type="module">console.log("visualstyle: 4.2", `build:${document.body.dataset.build}`);</script>
+  <link rel="stylesheet" href="/images/base.css"></head>
+  <body class="viewport" data-build="Aug 28 2025 12:16:44"><div class="viewport-inner">
+      <feature-flag></feature-flag>
+      <div id="rotation-alert">
+        <div>
+          <span class="exclamation">!</span>
+          <span>Please Rotate your phone <br> This app only supports portrait view</span>
+        </div>
+      </div>
+    <nav id="action-center">
+      <div class="bg">
+        <picture>
+                    <source srcset="/srcset/banner/AppHeader.avif" type="image/avif">
+          <source srcset="/srcset/banner/AppHeader.webp" type="image/png">
+          <source srcset="/srcset/banner/AppHeader.png" type="image/png">
+          <img src="/srcset/banner/AppHeader.png" role="presentation">
+        </picture>
+      </div>
+      <div class="nav-content">
+      <$$ nav/title $$>
+      <$$ slider $$>
+      
+      </div> 
+      </nav>
+      <@@ content @@>
+    </div>
+    <$$ nav/buttons $$>
+  </body></html>

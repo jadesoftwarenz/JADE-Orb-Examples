@@ -1,0 +1,123 @@
+<agenda location="tech">
+
+<item>
+	<title>Registration Opens</title>
+	<start>9:00</start>
+	<stop>9:30</stop>
+	<speaker></speaker>
+</item>
+
+<item>
+	<title><![CDATA[Welcome & Business update]]></title>
+	<start>9:30</start>
+	<stop>9:45</stop>
+	<speaker>Alice Application</speaker>
+	<speaker>Bob Blank</speaker>
+</item>
+
+<item>
+	<title><![CDATA[Panel: Beginning and Implementing By Example]]></title>
+	<start>9:45</start>
+	<stop>10:15</stop>
+	<speaker>Bob Blank</speaker>
+	<speaker>Isabella Interface</speaker>
+	<speaker>Lauren Ipsum</speaker>
+	<speaker>Emma Epilog</speaker>
+	<blurb>Hear from technology leaders and learn by example.</blurb>
+</item>
+
+<item>
+	<title><![CDATA[Building Startups That Matter]]></title>
+	<start>10:15</start>
+	<stop>11:00</stop>
+	<speaker>Emma Epilog</speaker>
+	<blurb>Learn the lessons learned in turning innovative ideas into ventures that create real-world impact. Gain insights into strategic growth, fostering resilient teams, and designing products that solve meaningful problems.</blurb>
+</item>
+
+<item>
+	<title><![CDATA[Accelerating a Tech-Enabled Future]]></title>
+	<start>11:00</start>
+	<stop>11:30</stop>
+	<speaker>Christopher Prime</speaker>
+	<blurb>Enabling export-led growth, jobs, productivity, and innovation through technology.</blurb>
+</item>
+
+<item>
+	<title><![CDATA[Lunch Break featuring special guest]]></title>
+	<start>11:30</start>
+	<stop>12:30</stop>
+	<speaker>Christopher Prime</speaker>
+</item>
+
+<item>
+	<title><![CDATA[Strategies for Operational Excellence]]></title>
+	<start>12:30</start>
+	<stop>12:45</stop>
+	<speaker>Greg Global</speaker>
+	<blurb>Learn how to manage international expansion, align cross-functional teams, and build strategic partnerships that drive global growth. Gain practical insights into optimizing operations, improving efficiency, and leading with a global perspective.</blurb>
+</item>
+
+<item>
+	<title><![CDATA[Key Feature Spotlight]]></title>
+	<start>12:45</start>
+	<stop>13:45</stop>
+	<speaker>Keith Kernel</speaker>
+	<speaker>David Demonstration</speaker>
+	<blurb>The future of web development</blurb>
+</item>
+
+<item>
+	<title><![CDATA[State of Play]]></title>
+	<start>13:45</start>
+	<stop>14:00</stop>
+	<speaker>Jerry Jadrap</speaker>
+	<blurb>Explore the current landscape of enterprise IT solutions and the trends shaping the future of technology deployment. Learn how to align technology with business goals, streamline complex projects, and deliver measurable results in fast-paced, evolving environments.</blurb>
+</item>
+
+<item>
+	<title><![CDATA[Doing Stuff and Things]]></title>
+	<start>14:00</start>
+	<stop>14:30</stop>
+	<speaker>Fred Filler</speaker>
+	<blurb>A practical framework for achieving the achievable, doing the doable, and succeeding at the succeedable.</blurb>
+</item>
+
+<item>
+	<title><![CDATA[Afternoon Tea]]></title>
+	<start>14:30</start>
+	<stop>15:00</stop>
+	<speaker></speaker>
+</item>
+
+<item>
+	<title><![CDATA[Event Architecture]]></title>
+	<start>15:00</start>
+	<stop>15:30</stop>
+	<speaker>Harry Hypothetical</speaker>
+	<blurb>Dive into the design and implementation of scalable, real-time event-driven systems. Learn how to structure architectures that handle high volumes of data, enable rapid decision-making, and support innovative applications in dynamic technological environments.</blurb>
+</item>
+
+<item>
+	<title><![CDATA[Leading By Example]]></title>
+	<start>15:30</start>
+	<stop>16:00</stop>
+	<speaker>Lauren Ipsum</speaker>
+	<blurb>Vestibulum Maximum Tempus</blurb>
+</item>
+
+<item>
+	<title><![CDATA[Final Close & Reflections]]></title>
+	<start>16:00</start>
+	<stop>16:30</stop>
+	<speaker>David Demonstration</speaker>
+	<speaker>Jerry Jadrap</speaker>
+</item>
+
+<item>
+	<title><![CDATA[Mix and Mingle]]></title>
+	<start>16:30</start>
+	<stop>17:30</stop>
+	<speaker></speaker>
+</item>
+
+</agenda>

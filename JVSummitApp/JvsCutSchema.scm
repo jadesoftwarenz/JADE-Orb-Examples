@@ -138,7 +138,7 @@ typeDefinitions
 		setModifiedTimeStamp "cnwcb7" "99.0.00" 2025:07:02:09:47:33.987;
 	jadeMethodDefinitions
 		initApp() updating;
-		setModifiedTimeStamp "cnwcb7" "99.0.00" 2025:10:14:13:21:49.657;
+		setModifiedTimeStamp "cnwcb7" "99.0.00" 2025:10:14:13:28:15.999;
 		initBackgroundWorkerApp();
 		setModifiedTimeStamp "cnwcb7" "99.0.00" 2025:08:21:12:23:22.267;
 	)
@@ -509,19 +509,19 @@ typeDefinitions
 	(
 	jadeMethodDefinitions
 		populateData();
-		setModifiedTimeStamp "cnwcb7" "99.0.00" 2025:08:28:06:56:11.760;
+		setModifiedTimeStamp "cnwcb7" "99.0.00" 2025:10:14:13:40:53.149;
 		zAddChatrooms() protected;
-		setModifiedTimeStamp "cnwcb7" "99.0.00" 2025:08:29:06:03:41.125;
+		setModifiedTimeStamp "cnwcb7" "99.0.00" 2025:10:14:13:41:26.913;
 		zAddUsersFromData() protected;
-		setModifiedTimeStamp "cnwcb7" "99.0.00" 2025:10:14:13:20:16.798;
+		setModifiedTimeStamp "cnwcb7" "99.0.00" 2025:10:14:13:41:37.209;
 		zInit() protected;
 		setModifiedTimeStamp "cnwcb7" "99.0.00" 2025:08:02:00:41:49.660;
 		zPopulateAgendaFromData() protected;
-		setModifiedTimeStamp "cnwcb7" "99.0.00" 2025:09:24:09:09:06.038;
+		setModifiedTimeStamp "cnwcb7" "99.0.00" 2025:10:14:13:43:22.793;
 		zPopulateChatMsgs() protected;
-		setModifiedTimeStamp "cnwcb7" "99.0.00" 2025:09:01:11:06:20.618;
+		setModifiedTimeStamp "cnwcb7" "99.0.00" 2025:10:14:13:42:24.508;
 		zPopulateSpeakersFromData() protected;
-		setModifiedTimeStamp "cnwcb7" "99.0.00" 2025:08:02:00:43:14.478;
+		setModifiedTimeStamp "cnwcb7" "99.0.00" 2025:10:14:13:42:37.401;
 	)
 	JadeXMLParser completeDefinition
 	(
@@ -574,7 +574,7 @@ typeDefinitions
 			attributeCount: Integer) updating, protected;
 		setModifiedTimeStamp "cnwcb7" "99.0.00" 2025:08:28:07:52:59.442;
 		xFinaliseItem() updating, protected;
-		setModifiedTimeStamp "cnwcb7" "99.0.00" 2025:08:28:07:56:01.195;
+		setModifiedTimeStamp "cnwcb7" "99.0.00" 2025:10:14:13:40:18.827;
 	)
 	SpeakerXmlParser completeDefinition
 	(
@@ -1142,8 +1142,8 @@ initApp() updating;
 
 constants
 	// needs to end with a trailing backslash
-	Root = "C:\repos\ouroboros\JVSApp\dist\";
-	ProjectorRoot = "C:\repos\ouroboros\JVSApp\dist_projector\";
+	Root = "C:\repos\jade-orb-examples\JVSummitApp\dist\";
+	ProjectorRoot = "C:\repos\jade-orb-examples\JVSummitApp\dist_projector\";
 	
 	Version = @"1.3.0";
 vars
@@ -1174,15 +1174,15 @@ begin
 	Orb@addHtmlTemplate("settings", Root & "settings.html");
 	
 	/* Ouroboros navigation */
-	Orb@addHtmlTemplate("nav/title", Root & "ouroboros-navigation\section_title.html");
-	Orb@addHtmlTemplate("nav/buttons", Root & "ouroboros-navigation\nav.html");
-	Orb@addHtmlTemplate("nav/buttons-about", Root & "ouroboros-navigation/nav-about.html");
-	Orb@addHtmlTemplate("slider", Root & "ouroboros-navigation\slider.html");
+	Orb@addHtmlTemplate("nav/title", Root & "navigation\section_title.html");
+	Orb@addHtmlTemplate("nav/buttons", Root & "navigation\nav.html");
+	Orb@addHtmlTemplate("nav/buttons-about", Root & "navigation/nav-about.html");
+	Orb@addHtmlTemplate("slider", Root & "navigation\slider.html");
 	
 	/* login */
 	Orb@addHtmlTemplate("login", Root & "login.html");
 	Orb@addHtmlTemplate("welcome", Root & "welcome.html");
-	Orb@addHtmlTemplate("login-error", Root & "ouroboros-navigation\login-error.html");
+	Orb@addHtmlTemplate("login-error", Root & "navigation\login-error.html");
 	
 	/* chat */
 	Orb@addHtmlTemplate("chat/message", Root & "chatroom\chat-message.html");
@@ -1198,7 +1198,7 @@ begin
 	Orb@addHtmlTemplate("agenda/item/rated", Root & "agenda\agendafeedbackcomplete.html");
 	Orb@addDynamicTemplate("dynamicagendaitem", AgendaTemplate);
 	Orb@addHtmlTemplate("agenda/profile", Root & "agenda\speaker-profile.html");
-	Orb@addHtmlTemplate("agenda/modal/close", Root & "ouroboros-navigation\agenda_modal_close.html");
+	Orb@addHtmlTemplate("agenda/modal/close", Root & "navigation\agenda_modal_close.html");
 	Orb@addHtmlTemplate("agenda/footer", Root & "agenda\agendafooter.html");
 	Orb@addHtmlTemplate("agenda/rating", Root & "agenda\rating.html");
 	Orb@addHtmlTemplate("agenda/item/rating", Root & "agenda\agendaitemrating.html");
@@ -1923,7 +1923,7 @@ begin
 	zAddUsersFromData;
 	zPopulateChatMsgs;
 	zPopulateSpeakersFromData;
-	zPopulateAgendaFromData;
+	zPopulateAgendaFromData;	
 end;
 }
 zAddChatrooms
@@ -1941,6 +1941,8 @@ begin
 	cr := create Chatroom(1, "Business Stream", "Business Stream") persistent;
 	cr := create Chatroom(2, "Technical Stream", "Technical Stream") persistent;
 	commitTransaction;
+	
+	write "[JV App] Chatrooms created";
 end;
 }
 zAddUsersFromData
@@ -1960,6 +1962,8 @@ begin
 	beginTransaction;
 	user := create UserAccount("George McFly", "Future Inc.", "george@example.com", "george@example.com", "business") persistent;
 	commitTransaction;
+	
+	write "[JV App] Users created";
 end;
 }
 zInit
@@ -1994,13 +1998,16 @@ begin
 	commitTransaction;
 	
 	create tparser transient;
-	tparser.parseFile(app.zScriptRoot & "..\agenda_tech.xml");
+	tparser.parseFile(app.zScriptRoot & "..\data\agenda_tech.xml");
 	
 	create bparser transient;
-	bparser.parseFile(app.zScriptRoot & "..\agenda_business.xml");
+	bparser.parseFile(app.zScriptRoot & "..\data\agenda_business.xml");
 epilog
 	delete tparser;
 	delete bparser;
+	
+	write "[JV App] Agenda populated";
+	write "[JV App] All data loaded";
 end;
 }
 zPopulateChatMsgs
@@ -2049,6 +2056,8 @@ begin
 		msg := create ChatMessage("Welcome to the Jade Velocity Summit 2025!", Host, host, cr) persistent;
 		commitTransaction;
 	endforeach;
+	
+	write "[JV App] Chatrooms populated";
 end;
 }
 zPopulateSpeakersFromData
@@ -2067,10 +2076,12 @@ begin
 	commitTransaction;
 	
 	create parser transient;
-	parser.parseFile(app.zScriptRoot & "..\speakers.xml");
+	parser.parseFile(app.zScriptRoot & "..\data\speakers.xml");
 	
 epilog
 	delete parser;
+	
+	write "[JV App] Speaker info populated";
 end;
 }
 	)
@@ -2152,6 +2163,9 @@ xFinaliseItem
 {
 xFinaliseItem() updating, protected;
 
+constants
+	WarnMissingSpeaker = false;
+
 vars
 	start : Time;
 	stop : Time;
@@ -2174,7 +2188,9 @@ begin
 				write dataTitle & ": " & "speaker missing social link [" & speakerName & "]";
 			endif;
 		else
-			write dataTitle & ": " & "missing speaker [" & speakerName & "]";
+			if WarnMissingSpeaker then
+				write dataTitle & ": " & "missing speaker [" & speakerName & "]";
+			endif;
 		endif;
 	endforeach;
 

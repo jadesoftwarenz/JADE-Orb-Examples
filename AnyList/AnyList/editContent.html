@@ -1,0 +1,30 @@
+<main id="main" class="Layout">
+  <h1>Create content</h1>
+  <div id="ErrorContent"></div>
+
+  <form data-orb-submit="/create/content/submit">
+    <label>
+      Title
+      <input name="title" required />
+    </label>
+
+    <label>
+      Description
+      <textarea name="description" required></textarea>
+    </label>
+
+    <label>
+      Type
+      <select name="type" required>
+        <option value=""></option>
+        <option value="Movie">Movie</option>
+        <option value="Show">Show</option>
+      </select>
+    </label>
+
+    <x-imageupload data-heading="Cover" data-name="cover"></x-imageupload>
+    <x-imageupload data-heading="Header" data-name="header"></x-imageupload>
+
+    <button type="submit">Create</button>
+  </form>
+</main>

@@ -1,0 +1,48 @@
+<main id="main" class="Layout UserLayout">
+  <h1><@@ username @@></h1>
+  <aside class="UserSidebar">
+    <h2>Lists</h2>
+    <a href="#watching">Watching</a>
+    <a href="#planning">Planning</a>
+    <a href="#finished">Finished</a>
+    <a href="#dropped">Dropped</a>
+  </aside>
+  <div class="UserLists">
+    <h2 id="watching">Watching</h2>
+    <div class="UserList">
+      <div class="UserListFallback">
+        <div class="UserListSad">(´•︵•`)</div>
+        Nothing in here.
+      </div>
+      <$$ userListHeader $$>
+      <$$ userList allWatching $$>
+    </div>
+    <h2 id="planning">Planning</h2>
+    <div class="UserList">
+      <div class="UserListFallback">
+        <div class="UserListSad">(⚆ᗝ⚆)</div>
+        Nothing in here.
+      </div>
+      <$$ userListHeader $$>
+      <$$ userList allPlanning $$>
+    </div>
+    <h2 id="finished">Finished</h2>
+    <div class="UserList">
+      <div class="UserListFallback">
+        <div class="UserListSad">(╥﹏╥)</div>
+        Nothing in here.
+      </div>
+      <$$ userListHeader $$>
+      <$$ userList allFinished $$>
+    </div>
+    <h2 id="dropped">Dropped</h2>
+    <div class="UserList">
+      <div class="UserListFallback">
+        <div class="UserListSad">ദ്ദി・ᴗ・)</div>
+        Nothing in here.
+      </div>
+      <$$ userListHeader $$>
+      <$$ userList allDropped $$>
+    </div>
+  </div>
+</main>

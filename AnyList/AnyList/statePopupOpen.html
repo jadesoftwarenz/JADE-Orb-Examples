@@ -1,0 +1,46 @@
+<x-statepopup id="StatePopup" class="StatePopup">
+  <div class="StatePopupArea">
+    <div class="StatePopupHeader">
+      <picture>
+        <source srcset="/assets/img/close-dark.svg" media="(prefers-color-scheme: dark)" />
+        <img src="/assets/img/close-light.svg" id="StatePopupClose" />
+      </picture>
+      <img class="StatePopupBanner" src="/image/content/header/<@@ contentID @@>" />
+      <div class="StatePopupCoverContainer">
+        <img class="StatePopupCover" src="/image/content/cover/<@@ contentID @@>" />
+        <div class="StatePopupTitle"><@@ contentTitle @@></div>
+      </div>
+    </div>
+    <div class="StatePopupErrorContainer"><div id="ErrorStatePopup"></div></div>
+    <form class="StatePopupInputs" data-orb-submit="/state/update/<@@ contentID @@>">
+      <label>
+        Status
+        <select name="status" required>
+          <option value="Watching" <%% isStatusEqual Watching %%>>Watching</option>
+          <option value="Planning" <%% isStatusEqual Planning %%>>Planning</option>
+          <option value="Finished" <%% isStatusEqual Finished %%>>Finished</option>
+          <option value="Dropped" <%% isStatusEqual Dropped %%>>Dropped</option>
+        </select>
+      </label>
+      <label>
+        Progress
+        <input name="progress" type="number" value="<@@ stateProgress @@>" />
+      </label>
+      <label>
+        Rating
+        <input name="rating" type="number" min="0" max="10" value="<@@ stateRating @@>" />
+      </label>
+      <label>
+        Notes
+        <textarea name="notes"><@@ stateNotes @@></textarea>
+      </label>
+
+      <div class="StatePopupButtons">
+        <button class="StatePopupButtonDelete" data-orb-trigger="/state/delete/<@@ contentID @@>">
+          Delete
+        </button>
+        <button type="submit">Update</button>
+      </div>
+    </form>
+  </div>
+</x-statepopup>

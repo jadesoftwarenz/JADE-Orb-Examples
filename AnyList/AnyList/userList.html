@@ -1,0 +1,21 @@
+<a
+  id="<@@ orb-id @@>"
+  class="UserListItem"
+  data-orb-id="<@@ orb-id @@>"
+  href="/content/<%% getContentID %%>"
+  data-orb-navigate="/content/<%% getContentID %%>"
+>
+  <img class="UserListItemCover" src="/image/content/cover/<%% getContentID %%>" />
+  <div class="UserListItemMetadata">
+    <div class="UserListItemTitle"><%% getContentTitle %%></div>
+    <div class="UserListItemState">
+      <span class="UserListItemMetadataName">Rating</span>
+      <@@ rating @@>
+    </div>
+    <div class="UserListItemState">
+      <span class="UserListItemMetadataName">Progress</span>
+      <@@ progress @@>
+    </div>
+    <div class="UserListItemType"><%% getContentType %%></div>
+  </div>
+</a>

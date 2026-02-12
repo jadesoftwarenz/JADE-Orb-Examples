@@ -1,0 +1,27 @@
+<main id="main">
+  <div class="ContentBannerContainer">
+    <img class="ContentBanner" src="/image/content/header/<@@ contentID @@>" />
+  </div>
+
+  <div class="ContentHeaderContainer">
+    <div class="ContentHeader">
+      <div>
+        <img class="ContentCover" src="/image/content/cover/<@@ contentID @@>" />
+        <button class="ContentButton" data-orb-trigger="/state/popup/<@@ contentID @@>" data-orb-trigger-reload="/content/<@@ contentID @@>">
+          <@@ contentStatus @@>
+        </button>
+      </div>
+
+      <div>
+        <h1 class="ContentTitle"><@@ contentTitle @@></h1>
+        <div class="ContentDescription"><@@ contentDescription @@></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="Layout ContentLayout">
+    <$$ contentInfo content $$>
+  </div>
+
+  <div id="StatePopup"></div>
+</main>

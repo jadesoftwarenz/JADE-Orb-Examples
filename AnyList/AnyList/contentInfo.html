@@ -1,0 +1,45 @@
+<aside class="ContentSidebar">
+  <div class="ContentSidebarBox">
+    <div>
+      <h2>Type</h2>
+      <@@ type @@>
+    </div>
+    <div>
+      <h2>Rating</h2>
+      <@@ rating @@>
+    </div>
+  </div>
+  <a
+    class="ContentSidebarEdit"
+    href="/edit/content/<@@ id @@>"
+    data-orb-navigate="/edit/content/<@@ id @@>"
+  >
+    Edit
+  </a>
+</aside>
+<div class="ContentMain">
+  <div>
+    <h2>Trailer</h2>
+    <div class="ContentBlockFallback ContentTrailerFallback">
+      <div class="ContentBlockSad">૮(°□°'˶)ა</div>
+      No trailer.
+    </div>
+    <iframe class="ContentTrailer" src="<@@ trailer @@>" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <div>
+    <h2>Rating</h2>
+    <x-rating
+      data-r1="<%% getRatingCount 1 %%>"
+      data-r2="<%% getRatingCount 2 %%>"
+      data-r3="<%% getRatingCount 3 %%>"
+      data-r4="<%% getRatingCount 4 %%>"
+      data-r5="<%% getRatingCount 5 %%>"
+      data-r6="<%% getRatingCount 6 %%>"
+      data-r7="<%% getRatingCount 7 %%>"
+      data-r8="<%% getRatingCount 8 %%>"
+      data-r9="<%% getRatingCount 9 %%>"
+      data-r10="<%% getRatingCount 10 %%>"
+    ></x-rating>
+  </div>
+</div>
+

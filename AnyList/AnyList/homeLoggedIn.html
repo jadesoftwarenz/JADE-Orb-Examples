@@ -1,0 +1,30 @@
+<main id="main" class="Layout HomeLayout">
+  <div>
+    <h2>Watching</h2>
+
+    <div id="StatePopup"></div>
+    <div class="HomeWatchingNone">
+      <div class="HomeWatchingSad">(ꃋᴖꃋ)</div>
+      <div>Not watching anything.</div>
+      <div>
+        Try
+        <a href="/browse" data-orb-navigate="/browse">browsing</a>
+        to find something!
+      </div>
+    </div>
+    <div id="HomeWatching" class="HomeWatchingItems" data-orb-live="/watching" data-orb-live-scroll="false">
+      <$$ homeWatchingWrapper user $$>
+    </div>
+  </div>
+
+  <div>
+    <h2>Activity</h2>
+    <form class="HomeNewActivity" data-orb-submit="/create/activity/submit">
+      <input name="message" placeholder="Write a short post…" data-orb-post="clear" />
+      <button type="submit">Send</button>
+    </form>
+    <div class="HomeActivities" data-orb-live="/activity" data-orb-live-scroll="false">
+      <$$ homeActivity activityByTimeAdded $$>
+    </div>
+  </div>
+</main>

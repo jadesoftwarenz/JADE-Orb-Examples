@@ -1,0 +1,21 @@
+<div class="Layout BrowseLayout">
+  <div>
+    <div class="BrowseHeading">
+      <h2>Top rated</h2>
+      <a href="/browse/top" data-orb-navigate="/browse/top">View all</a>
+    </div>
+    <div class="BrowseContentList">
+      <$$ browseContent contentByRating $$>
+    </div>
+  </div>
+
+  <div>
+    <div class="BrowseHeading">
+      <h2>Latest</h2>
+      <a href="/browse/latest" data-orb-navigate="/browse/latest">View all</a>
+    </div>
+    <div class="BrowseContentList">
+      <$$ browseContent contentByTimeAdded $$>
+    </div>
+  </div>
+</div>

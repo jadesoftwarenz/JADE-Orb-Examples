@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema name="DealerSchema" JadeVersionNumber="25.0.01" CompleteDefinition="true">
+	<Application name="DealerSchema">
+		<__overridePatchNumber>0</__overridePatchNumber>
+		<__patchControlString/>
+		<_aboutFormName/>
+		<_defaultLocaleId>0</_defaultLocaleId>
+		<_modifiedBy/>
+		<_modifiedTimestamp/>
+		<_patchVersion>0</_patchVersion>
+		<_startupFormName/>
+		<_systemVersion/>
+		<aboutForm/>
+		<appVersion/>
+		<applicationType>G</applicationType>
+		<controlSpacing>0</controlSpacing>
+		<defaultApp>true</defaultApp>
+		<defaultMdi>false</defaultMdi>
+		<finalizeMethod/>
+		<fontBold>false</fontBold>
+		<fontName>Tahoma</fontName>
+		<fontSize>8.25</fontSize>
+		<formMargin>0</formMargin>
+		<heightSingleLineControl>0</heightSingleLineControl>
+		<helpFile/>
+		<icon/>
+		<initializeMethod/>
+		<mdiStyle>0</mdiStyle>
+		<mdiWindowListOrder>0</mdiWindowListOrder>
+		<name>DealerSchema</name>
+		<showBubbleHelp>false</showBubbleHelp>
+		<startupForm/>
+		<useBorderStyleOnly>false</useBorderStyleOnly>
+		<webMinimumResponseTime>0</webMinimumResponseTime>
+		<threeDControls>
+			<GUIClass name="GroupBox" />
+			<GUIClass name="OptionButton" />
+			<GUIClass name="CheckBox" />
+		</threeDControls>
+	</Application>
+	<Application name="Gameapp">
+		<__overridePatchNumber>0</__overridePatchNumber>
+		<__patchControlString/>
+		<_aboutFormName/>
+		<_defaultLocaleId>0</_defaultLocaleId>
+		<_internetPipeName>localhost:9999</_internetPipeName>
+		<_isOrbApp>true</_isOrbApp>
+		<_modifiedBy>Carlin</_modifiedBy>
+		<_modifiedTimestamp>2025:11:28:16:56:46.746</_modifiedTimestamp>
+		<_numberOfPipes>1</_numberOfPipes>
+		<_patchVersion>0</_patchVersion>
+		<_startupFormName/>
+		<_systemVersion>25.0.01</_systemVersion>
+		<_webAppDirectory/>
+		<_webBaseURL/>
+		<_webDefaultTimeZone/>
+		<_webDisplayMessages>false</_webDisplayMessages>
+		<_webDisplayPreference>N</_webDisplayPreference>
+		<_webFinalizeMethod/>
+		<_webHomePage/>
+		<_webInitializeMethod/>
+		<_webIsSecure>false</_webIsSecure>
+		<_webMachineName/>
+		<_webMaxHTMLSize>0</_webMaxHTMLSize>
+		<_webServiceClasses/>
+		<_webSessionTimeout>0</_webSessionTimeout>
+		<_webShowContent>false</_webShowContent>
+		<_webShowModal>false</_webShowModal>
+		<_webStartupForm/>
+		<_webStartupFormName/>
+		<_webStatusLineDisplay/>
+		<_webUseHTML32>false</_webUseHTML32>
+		<_webVirtualDirectory/>
+		<aboutForm/>
+		<appVersion/>
+		<applicationType>W</applicationType>
+		<controlSpacing>4</controlSpacing>
+		<defaultApp>false</defaultApp>
+		<defaultMdi>false</defaultMdi>
+		<finalizeMethod/>
+		<fontBold>false</fontBold>
+		<fontName>Tahoma</fontName>
+		<fontSize>8.25</fontSize>
+		<formMargin>7</formMargin>
+		<heightSingleLineControl>14</heightSingleLineControl>
+		<helpFile/>
+		<icon/>
+		<initializeMethod name="initApp" />
+		<mdiStyle>0</mdiStyle>
+		<mdiWindowListOrder>0</mdiWindowListOrder>
+		<name>Gameapp</name>
+		<showBubbleHelp>false</showBubbleHelp>
+		<startupForm/>
+		<useBorderStyleOnly>true</useBorderStyleOnly>
+		<webMinimumResponseTime>0</webMinimumResponseTime>
+		<threeDControls>
+			<GUIClass name="GroupBox" />
+		</threeDControls>
+	</Application>
+</schema>

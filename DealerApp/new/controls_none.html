@@ -1,0 +1,13 @@
+<div class="hidden">
+	<div class="controls-left">
+		<button class="btn btn-secondary" data-orb-trigger="fold" disabled>Fold</button>
+
+	</div>
+	<div class="controls-right">
+		<form data-orb-submit="bet">
+			<button class="btn btn-primary" type="submit" disabled>Bet</button>
+			<!-- <label for="betAmount">Bet</label> -->
+			<input id="betAmount" name="betAmount" type="number" min="<%% callMinimum %%>" step="10" value="<%% callMinimum %%>" autocomplete="off" disabled />
+		</form>
+	</div>
+</div>

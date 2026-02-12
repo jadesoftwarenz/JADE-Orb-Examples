@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Album Add</title>
+        <link rel="stylesheet" href="styles/bootstrap.min.css">
+        <link rel="stylesheet" href="styles/nav-bottom.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+		<link rel="stylesheet" href="styles/album-view.css">
+        <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+        <style>
+            :root {
+                --js-ff-accent: "gf_Limelight variant1", Tofu;
+                --js-fs-h1: 48px;
+                --js-fw-h1: 500;
+                --js-lh-h1: 120%;
+                --js-fs-h2: 34px;
+                --js-fw-h2: 500;
+                --js-lh-h2: 120%;
+                --fs-fs-input: 16px;
+                --js-fw-input: 400;
+                --js-lh-input: 150%;
+                --js-typo-clr-primary: white;
+                --js-surface-primary: #333;
+                --js-surface-success: rgb(42, 182, 110);
+                --js-brand-clr-100: #85ff58
+            }
+
+            h1 i {
+                font-size: 1.067rem;
+                font-weight: 400;
+                font-family: var(--js-ff-accent)
+            }
+
+            .js-header {
+                width: 100%;
+                min-height: 5em;
+                background: var(--js-surface-primary);
+                color: var(--js-typo-clr-primary);
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding-inline:3rem;margin-bottom: 3rem;
+                .js-header__brand {
+                    font-size: var(--js-fs-h1);
+                    font-weight: var(--js-fw-h1);
+                    line-height: var(--js-lh-h1)
+                }
+
+                .js-header__user {
+                    margin-left: auto;
+                    margin-right: 1.5rem
+                }
+
+                .js-header__image {
+                    display: block;
+                    height: 48px;
+                    width: auto
+                }
+            }
+
+            .js-swiper-jukebox {
+                padding-block:50px;height: 600px;
+                width: 100%;
+                .swiper-slide {
+                    width: 600px;
+                    height: 400px;
+                    background-position: center;
+                    background-size: cover;
+                    overflow: clip;
+                    img {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: center
+                    }
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <$$ header myUser $$>
+        <main>
+		<div class="subheader">
+    <h1 id="albumName">Album: <@@ name @@></h1>
+
+    <div class="subheader-actions">
+        <button id="btnpress" class="btn btn-primary">Generate Collage</button>
+		<button id="downloadAll" class ="btn btn-success">Download</button>
+        <button class="btn btn-secondary">Edit Album</button>
+        <button class="btn btn-danger" onclick="window.location.href='/remove-album?name=<@@ name @@>';">Delete</button>
+    </div>
+</div>
+			<div class="swiper js-swiper-jukebox">
+                <div class="swiper-wrapper">
+				 <$$ photo-template photos $$>
+                </div>
+                <div class="swiper-pageination"></div>
+				<div class="swiper-button-prev"></div> 
+				<div class="swiper-button-next"></div>
+                <div class="swiper-button-scrollbar"></div>
+            </div>
+        </main>
+		
+		<$$ nav-bottom $$>
+        <script src="scripts/bootstrap.bundle.min.js"></script>
+		<script defer>
+                document.addEventListener("DOMContentLoaded", () => {
+                    var swiper = new Swiper(".swiper",{
+                        effect: "coverflow",
+                        grabCursor: true,
+                        centeredSlides: true,
+                        slidesPerView: "auto",
+                        coverflowEffect: {
+                            rotate: 50,
+                            stretch: 0,
+                            depth: 100,
+                            modifier: 1,
+                            slideShadows: true,
+                        },
+                        pagination: {
+                            el: ".swiper-pagination",
+                        },
+						navigation: {
+											nextEl: ".swiper-button-next",
+											prevEl: ".swiper-button-prev",
+						},
+                    });
+                }
+                )
+            </script>
+			
+			<script src="/scripts/album-view-test.js"></script>
+	</body>
+</html>

@@ -1,0 +1,57 @@
+:root {
+                --js-ff-accent: "gf_Limelight variant1", Tofu;
+                --js-fs-h1: 48px;
+                --js-fw-h1: 500;
+                --js-lh-h1: 120%;
+                --js-fs-h2: 34px;
+                --js-fw-h2: 500;
+                --js-lh-h2: 120%;
+                --fs-fs-input: 16px;
+                --js-fw-input: 400;
+                --js-lh-input: 150%;
+                --js-typo-clr-primary: white;
+                --js-surface-primary: #333;
+                --js-surface-success: rgb(42, 182, 110);
+                --js-brand-clr-100: #85ff58
+            }
+
+           h1 {
+  font-size: 3rem;
+  padding-top: 3px;
+  text-align: center;
+  color: white;
+}
+
+            .js-header {
+                width: 100%;
+                min-height: 5em;
+                background: var(--js-surface-primary);
+                color: var(--js-typo-clr-primary);
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding-inline:3rem;margin-bottom: 3rem;
+                .js-header__brand {
+                    font-size: var(--js-fs-h1);
+                    font-weight: var(--js-fw-h1);
+                    line-height: var(--js-lh-h1)
+                }
+
+                .js-header__user {
+                    margin-left: auto;
+                    margin-right: 1.5rem
+                }
+
+                .js-header__image {
+                    display: block;
+                    height: 48px;
+                    width: auto
+                }
+            }
+
+.limelight-regular {
+  font-size: 3.2rem;
+  font-family: "gf_Limelight variant1", Tofu;
+  font-weight: 400;
+  font-style:normal;
+}

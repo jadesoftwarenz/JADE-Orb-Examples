@@ -1,0 +1,3 @@
+﻿#MULTIPLE_SCHEMA_EXTRACT
+JadeStudioModelSchema.scm JadeStudioModelSchema.ddx
+JadeStudioOrbSchema.scm JadeStudioOrbSchema.ddx

@@ -1,0 +1,28 @@
+<div class="StatePopupInputs">
+  <label>
+    Status
+    <select name="status" required>
+      <option value="watching">Watching</option>
+      <option value="planning">Planning</option>
+      <option value="finished">Finished</option>
+      <option value="dropped">Dropped</option>
+    </select>
+  </label>
+  <label>
+    Progress
+    <input name="progress" type="number" />
+  </label>
+  <label>
+    Rating
+    <input name="rating" type="number" min="1" max="10" />
+  </label>
+  <label>
+    Notes
+    <textarea name="notes"></textarea>
+  </label>
+
+  <div class="StatePopupButtons">
+    <button class="StatePopupButtonDelete"type="submit">Delete</button>
+    <button type="submit">Update</button>
+  </div>
+</div>

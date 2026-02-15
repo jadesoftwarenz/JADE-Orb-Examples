@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Album Add</title>
+        <link rel="stylesheet" href="styles/bootstrap.min.css">
+		<link rel="stylesheet" href="styles/header.css">
+        <link rel="stylesheet" href="styles/nav-bottom.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+        <link rel="stylesheet" href="styles/albums-page.css">
+		<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+        <style>
+		
+		
+                .js-header__image {
+                    display: block;
+                    height: 100px;
+                    width: auto
+                }
+            }
+
+            .js-swiper-jukebox {
+                padding-block:50px;height: 600px;
+                width: 100%;
+                .swiper-slide {
+                    width: 600px;
+                    height: 400px;
+                    background-position: center;
+                    background-size: cover;
+                    overflow: clip;
+                    img {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: center
+                    }
+                }
+            }
+
+            .js-swiper {
+                height: 100%;
+                .swiper-slide {
+                    width: 100cqh;
+                    height: auto;
+                    background-position: center;
+                    background-size: cover;
+                    img {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: center
+                    }
+                }
+            }
+
+            .js-album-gallery {
+                width: calc(100% - 6rem);
+				height: 100%;
+                margin-block:3rem;margin-inline:auto;background: var(--js-surface-teritary);
+                border-radius: 6px 6px 0 0;
+                border: solid 2px #f0f0f0;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                .js-album-gallery__menu {
+                    grid-column: 1 / -1;
+                    grid-row: 1;
+                    background-color: var(--js-surface-success);
+                    padding-inline:3rem;padding-block:.75rem;display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    gap: 16px;
+                    border-radius: 6px 6px 0 0
+                }
+
+                .js-album-gallery__gallery {
+                    display: grid;
+                    gap: 20px;
+                    grid-template-columns: repeat(5,1fr)
+                }
+            }
+
+            figure {
+                margin: 0
+            }
+
+            .js-album-gallery--grid {
+                --cell-height: 30%;
+                --cell-width: 30cqh
+            }
+
+            .js-album-gallery--grid .js-album-item {
+                margin: 0;
+                position: relative;
+                .js-album-item__swiper {
+                    width: 100%;
+                    height: 100%;
+                    .js-album-item__swiper-image {
+                        display: none;
+                        &:first-of-type {
+                            display: block
+                        }
+
+                        img {
+                            height: 100%;
+                            width: 100%;
+                            object-fit: cover;
+                            object-position: center center
+                        }
+                    }
+                }
+
+                .js-album-item__info {
+                    opacity: 0;
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    z-index: 100;
+                    background-color: transparent;
+                    transition: .3s ease background-color;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    .js-album-item__description {
+                        display: none
+                    }
+                }
+
+                &:hover {
+                    .js-album-item__info {
+                        opacity: 1;
+                        background-color: #0000004d;
+                        color: #fff
+                    }
+                }
+            }
+        </style>
+    </head>
+    <body>
+       <$$ header $$>
+        <main>
+            
+            <section class="js-album-gallery--grid js-album-gallery js-light">
+                <div class="js-album-gallery__menu">
+                    <svg class="js-album-gallery__grid" width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Outer square -->
+                        <rect x="1" y="1" width="28" height="28" rx="2" ry="2" fill="none" stroke="currentColor" stroke-width="2"></rect>
+                        <!-- Grid squares (3×3) -->
+                        <rect x="5" y="5" width="6" height="6" fill="currentColor"></rect>
+                        <rect x="12" y="5" width="6" height="6" fill="currentColor"></rect>
+                        <rect x="19" y="5" width="6" height="6" fill="currentColor"></rect>
+                        <rect x="5" y="12" width="6" height="6" fill="currentColor"></rect>
+                        <rect x="12" y="12" width="6" height="6" fill="currentColor"></rect>
+                        <rect x="19" y="12" width="6" height="6" fill="currentColor"></rect>
+                        <rect x="5" y="19" width="6" height="6" fill="currentColor"></rect>
+                        <rect x="12" y="19" width="6" height="6" fill="currentColor"></rect>
+                        <rect x="19" y="19" width="6" height="6" fill="currentColor"></rect>
+                    </svg>
+                    <svg class="js-album-gallery__list" width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Outer square -->
+                        <rect x="1" y="1" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"></rect>
+                        <!-- List lines -->
+                        <line x1="6" y1="9" x2="24" y2="9" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+                        <line x1="6" y1="15" x2="24" y2="15" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+                        <line x1="6" y1="21" x2="24" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+                    </svg>
+                </div>
+				<div class="js-album-gallery__gallery">
+				<$$ album-template albumByName $$>
+				</div>
+            </section>
+        </main>
+		
+       <$$ nav-bottom $$>
+        <script src="scripts/bootstrap.bundle.min.js"></script>
+    </body>
+	
+</html>

@@ -1,0 +1,72 @@
+/* (ALL) Use a better box model */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+
+/* (ALL) Disable page margin */
+body {
+  margin: 0;
+}
+
+
+/* (ALL) Use sans-serif by default */
+body {
+  font-family: sans-serif;
+}
+
+
+/* (ALL) Fix monospace sizing */
+code,
+kbd,
+pre,
+samp,
+textarea {
+  /* Browsers change font-size when there is monospace by itself in the font
+   * family, this stupid hack bypasses this dumb ass-default. */
+  font-family: monospace, monospace;
+}
+
+
+/* (ALL) Normalise <hr> colour */
+hr {
+  border: 1px inset #888;
+}
+
+
+/* (ALL) <sub>, <sup> should not affect line-height */
+sub,
+sup {
+  font-size: 0.75em;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
+
+
+/* (Blink/WebKit) <b>, <strong> should have relative boldness */
+b,
+strong {
+  font-weight: bolder;
+}
+
+
+/* (Blink/Gecko) Fix vertical alignment */
+progress {
+  vertical-align: baseline;
+}
+
+
+/* (WebKit) Show dotted underline */
+abbr[title] {
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+}

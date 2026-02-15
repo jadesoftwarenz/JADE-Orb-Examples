@@ -1,0 +1,24 @@
+.subheader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;   /* H1 left, buttons right */
+    padding: 1rem 1rem;
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #ddd;
+    gap: 20px; /* keeps spacing tidy on narrow screens */
+}
+
+.subheader h1 {
+    margin: 0; 
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.subheader-actions {
+    display: flex;
+    gap: 10px; /* spacing between buttons */
+}
+
+.subheader-actions .btn {
+    white-space: nowrap; /* keeps buttons from wrapping */
+}

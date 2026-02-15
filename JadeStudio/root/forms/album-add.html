@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Album Add</title>	
+	
+		<link rel="stylesheet" href="styles/bootstrap.min.css">
+		<link rel="stylesheet" href="styles/album-add.css">
+		<link rel="stylesheet" href="styles/nav-bottom.css">
+			<link rel="stylesheet" href="styles/header.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+		<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+		<style>:root{--js-ff-accent: "gf_Limelight variant1", Tofu;--js-fs-h1: 48px;--js-fw-h1: 500;--js-lh-h1: 120%;--js-fs-h2: 34px;--js-fw-h2: 500;--js-lh-h2: 120%;--fs-fs-input: 16px;--js-fw-input: 400;--js-lh-input: 150%;--js-typo-clr-primary: white;--js-surface-primary: #333;--js-surface-success: rgb(42, 182, 110);--js-brand-clr-100: #85ff58}h1 i{font-size:1.067rem;font-weight:400;font-family:var(--js-ff-accent)}.js-header{width:100%;min-height:5em;background:var(--js-surface-primary);color:var(--js-typo-clr-primary);display:flex;flex-direction:row;align-items:center;padding-inline:3rem;margin-bottom:3rem;.js-header__brand{font-size:var(--js-fs-h1);font-weight:var(--js-fw-h1);line-height:var(--js-lh-h1)}.js-header__user{margin-left:auto;margin-right:1.5rem}.js-header__image{display:block;height:48px;width:auto}}.js-swiper-jukebox{padding-block:50px;height:600px;width:100%;.swiper-slide{width:600px;height:400px;background-position:center;background-size:cover;overflow:clip;img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}}}.js-swiper{height:100%;.swiper-slide{width:100cqh;height:auto;background-position:center;background-size:cover;img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}}}
+</style>
+		
+	</head>
+	
+		<body>
+		 <@@ headerContent @@>
+			<main class="row">
+			 
+				<!-- Left column: the form -->
+				<div class="col-md-4 ms-5">
+				  <h3> Add your Album </h3>
+				  <form id="albumForm">
+					<div class="mb-3">
+					  <input type="text" id="albumName" class="form-control" placeholder="Enter your album name" required>
+					</div>
+
+					<div class="mb-3">
+					  <label for="photos" class="form-label">Select Photos:</label>
+					  <input type="file" id="photos" accept="image/*" multiple class="form-control" required>
+					</div>
+
+					<button type="button" id="uploadBtn" class="btn btn-primary">Upload Album</button>
+				  </form>
+				</div>
+
+				<!-- Right column: the slideshow preview -->
+				<div class="col-md-7">
+				  <div class="slideshow-container">
+						<div class="swiper js-swiper"> 
+							<div class="swiper-wrapper">
+							</div>
+							<div class="swiper-button-prev"></div> <div class="swiper-button-next"></div> <div class="swiper-button-scrollbar"></div> 
+						</div>
+						 <script defer>
+							document.addEventListener(
+								"DOMContentLoaded",
+								() => {
+									var swiper = new Swiper(".swiper", {
+										grabCursor: true,
+										slidesPerView: "auto",
+										navigation: {
+											nextEl: ".swiper-button-next",
+											prevEl: ".swiper-button-prev",
+										},
+									});
+								},
+							);
+						</script>
+						<script>
+						document.addEventListener("DOMContentLoaded", () => {
+    const fileInput = document.getElementById("photos");
+    const wrapper = document.querySelector(".swiper-wrapper");
+
+    const swiper = new Swiper(".swiper", {
+        grabCursor: true,
+        slidesPerView: "auto",
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+
+    fileInput.addEventListener("change", function () {
+        // Clear existing slides if needed:
+        wrapper.innerHTML = "";
+
+        Array.from(this.files).forEach(file => {
+            const url = URL.createObjectURL(file);
+
+            const img = document.createElement("img");
+            img.classList.add("swiper-slide");
+            img.src = url;
+
+            wrapper.appendChild(img);
+        });
+
+        // Tell Swiper to rebuild slides
+        swiper.update();
+    });
+});
+
+						</script>
+				  </div>
+				</div>
+			  </div>
+			</main>		
+	<$$ nav-bottom $$>
+	<script src="scripts/album-add.js"></script>
+	<script src="scripts/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+

@@ -1,4 +1,6 @@
-### To use the example JV Summit App:
+# JV Summit App
+
+## Setup:
 
 1. 	Load `JadeOrbSchema` into your system
 2. 	Load `JvsCutSchema` into your system

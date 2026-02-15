@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="stylesheet" href="/assets/css/normalise.css" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <!-- We need a scroll and form submittion fixes -->
+    <script src="/assets/js/orb-script.js"></script>
+    <title>AnyList</title>
+  </head>
+  <body>
+    <nav class="NavbarContainer">
+      <div class="Navbar">
+        <div class="NavbarSection">
+          <a class="NavbarLogoContainer" href="/" data-orb-navigate="/">
+            <picture>
+              <source srcset="/assets/img/anylist-dark.svg" media="(prefers-color-scheme: dark)" />
+              <img class="NavbarLogo" src="/assets/img/anylist-light.svg" alt="AnyList" />
+            </picture>
+          </a>
+        </div>
+        <x-navbarmenu class="NavbarSection" data-username="<@@ username @@>"></x-navbarmenu>
+      </div>
+    </nav>
+
+    <main id="main">
+      <@@ view @@>
+    </main>
+
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>
